@@ -1,3 +1,4 @@
+import { AsyncActionExample } from "./asyncactionexample"
 import { CounterExampleInternalState, CounterExampleZustand } from "./counterexample"
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
           </h1>
           <CounterExampleInternalState />
           <CounterExampleZustand />
+          <AsyncActionExample />
         </div>
       </main>
     </div>
