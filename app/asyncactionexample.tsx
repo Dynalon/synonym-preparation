@@ -30,13 +30,13 @@ export const AsyncActionExample = () => {
   const doubleDown = useStore((state) => (state.data ?? 0) * 2)
   return (
     <div>
-      <button className="text-xl bg-red-600 p-1" onClick={store.fetchData}>
+      <button className="text-xl bg-blue-400 hover:bg-blue-200 p-1 text-white" onClick={store.fetchData}>
         Update
       </button>
       <div className="">
         <code>{JSON.stringify(store, undefined, 2)}</code>
       </div>
-      <div className="">{doubleDown}</div>
+      <div className="">Derived/Computed value double: {doubleDown}</div>
     </div>
   )
 }

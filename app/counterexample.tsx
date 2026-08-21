@@ -3,20 +3,6 @@
 import { useState } from "react"
 import { create } from "zustand"
 
-export const CounterExampleInternalState = () => {
-  const [counter, setCounter] = useState(0)
-  const inc = () => setCounter((v) => v + 1)
-  const dec = () => setCounter((v) => v - 1)
-
-  return (
-    <div className="">
-      <label>Counter {counter}</label>
-      <button onClick={inc}>+</button>
-      <button onClick={dec}>-</button>
-    </div>
-  )
-}
-
 interface CounterStore {
   count: number
   increment: () => void
@@ -29,13 +15,19 @@ const useStore = create<CounterStore>((set) => ({
   decrement: () => set((state) => ({ count: state.count - 1 })),
 }))
 
-export const CounterExampleZustand = () => {
+export const CounterExampleZustand = ({ ...props }: React.PropsWithChildren) => {
   const { count, increment, decrement } = useStore()
   return (
-    <div className="bg-red-600">
+    <div className="">
       <label>Counter {count}</label>
-      <button onClick={increment}>+</button>
-      <button onClick={decrement}>-</button>
+      <div className="flex items-left gap-2">
+        <button onClick={increment} className="flex items-center bg-blue-400 p-3 text-white">
+          +
+        </button>
+        <button onClick={decrement} className="flex items-center bg-blue-400 p-3 text-white">
+          -
+        </button>
+      </div>
     </div>
   )
 }
