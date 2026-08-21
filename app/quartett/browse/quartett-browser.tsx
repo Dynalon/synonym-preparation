@@ -6,8 +6,8 @@ import { Button } from "../../components/button"
 
 const NUM_CARDS = carDatabase.cards.length
 
-export function QuartettBrowser() {
-  const [selectedCard, setSelectedCard] = useState(1)
+export function QuartettBrowser({ id }: { id?: string }) {
+  const [selectedCard, setSelectedCard] = useState(id ? carDatabase.cards.findIndex((card) => card.id === id) + 1 : 1)
   const car = carDatabase.cards[selectedCard - 1]
   const inc = () => setSelectedCard((s) => Math.min(s + 1, NUM_CARDS))
   const dec = () => setSelectedCard((s) => Math.max(s - 1, 1))
