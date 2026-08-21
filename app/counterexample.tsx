@@ -1,7 +1,7 @@
 "use client"
 
-import { useState } from "react"
 import { create } from "zustand"
+import { Button } from "./components/button"
 
 interface CounterStore {
   count: number
@@ -15,18 +15,14 @@ const useStore = create<CounterStore>((set) => ({
   decrement: () => set((state) => ({ count: state.count - 1 })),
 }))
 
-export const CounterExampleZustand = ({ ...props }: React.PropsWithChildren) => {
+export const CounterExampleZustand = () => {
   const { count, increment, decrement } = useStore()
   return (
     <div className="">
-      <label>Counter {count}</label>
+      <label>Zustand Sample: counter={count}</label>
       <div className="flex items-left gap-2">
-        <button onClick={increment} className="flex items-center bg-blue-400 p-3 text-white">
-          +
-        </button>
-        <button onClick={decrement} className="flex items-center bg-blue-400 p-3 text-white">
-          -
-        </button>
+        <Button onClick={increment}>+</Button>
+        <Button onClick={decrement}>-</Button>
       </div>
     </div>
   )
