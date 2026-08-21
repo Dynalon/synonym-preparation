@@ -1,15 +1,21 @@
 import { Car, CarStats } from "../types"
+import { cn } from "../../util"
 
+export function CardTitle({ car: { brand, model, year } }: { car: Car }) {
+  return (
+    <div className="flex justify-between align-bottom ">
+      <span className="text-2xl truncate min-w-0">
+        {brand} <span className="text-lg italic text-amber-800">{model}</span>
+      </span>
+      <span className="text-gray-500 text-sm shrink-0">{year}</span>
+    </div>
+  )
+}
 export function QuartettCard({ car }: { car: Car }) {
   const { image, brand, model, year } = car
   return (
     <div className="w-[400px] p-3 rounded-2xl bg-white shadow-2xl flex flex-col gap-2">
-      <div className="flex justify-between align-bottom ">
-        <span className="text-2xl truncate min-w-0">
-          {brand} <span className="text-lg italic text-amber-800">{model}</span>
-        </span>
-        <span className="text-gray-500 text-sm shrink-0">{year}</span>
-      </div>
+      <CardTitle car={car} />
       <img src={`/cars/${image}`} className="w-full rounded-2xl" />
       <hr className="border-gray-200 my-3 w-[80%] mx-auto" />
       <CarStatsGrid stats={car.stats} />
@@ -26,9 +32,9 @@ function CarStatKeyValue({ label, value }: { label: React.ReactNode; value: Reac
   )
 }
 
-function CarStatsGrid({ stats }: { stats: CarStats }) {
+export function CarStatsGrid({ className, stats, ...props }: React.ComponentProps<"div"> & { stats: CarStats }) {
   return (
-    <div className="grid grid-cols-2 gap-x-1 gap-y-1">
+    <div className={cn("grid grid-cols-2 gap-x-1 gap-y-1", className)} {...props}>
       <CarStatKeyValue label={"Accel. 0-100"} value={<>{stats.acceleration_0_100_s}s</>} />
       <CarStatKeyValue label={"Cylinders"} value={stats.cylinders} />
       <CarStatKeyValue label={"Displacement"} value={<>{stats.displacement_cc.toLocaleString()} cc</>} />
