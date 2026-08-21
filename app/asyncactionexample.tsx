@@ -1,5 +1,6 @@
 "use client"
 import { create } from "zustand"
+import { Button } from "./components/button"
 
 interface Store {
   data: number | null
@@ -30,9 +31,9 @@ export const AsyncActionExample = () => {
   const doubleDown = useStore((state) => (state.data ?? 0) * 2)
   return (
     <div>
-      <button className="text-xl bg-blue-400 hover:bg-blue-200 p-1 text-white" onClick={store.fetchData}>
-        Update
-      </button>
+      <Button variant="secondary" size="lg" onClick={store.fetchData}>
+        Update with async action
+      </Button>
       <div className="">
         <code>{JSON.stringify(store, undefined, 2)}</code>
       </div>

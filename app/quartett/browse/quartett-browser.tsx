@@ -16,13 +16,13 @@ export function QuartettBrowser({ id }: { id?: string }) {
     <div className="w-full">
       <div className="w-full flex flex-col gap-4 items-center">
         <div className="w-[400px] text-md flex justify-between items-center gap-2">
-          <Button disabled={selectedCard === 1} onClick={dec}>
+          <Button variant="secondary" disabled={selectedCard === 1} onClick={dec}>
             {"<"}
           </Button>
           <span>
             Card {selectedCard}/{NUM_CARDS}
           </span>
-          <Button disabled={selectedCard === 100} onClick={inc}>
+          <Button variant="secondary" disabled={selectedCard === 100} onClick={inc}>
             {">"}
           </Button>
         </div>

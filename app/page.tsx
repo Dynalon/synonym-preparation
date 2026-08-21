@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { AsyncActionExample } from "./asyncactionexample"
 import { CounterExampleZustand } from "./counterexample"
+import { Button } from "./components/button"
 
 export default function Home() {
   return (
@@ -10,13 +11,31 @@ export default function Home() {
           <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
             Preparation Playground
           </h1>
-          <Link className="text-2xl font-bold" href={"/quartett"}>
-            To the Quartett area <span>{"\u2192"}</span>
-          </Link>
           <CounterExampleZustand />
           <AsyncActionExample />
+          <UiKit />
         </div>
       </main>
     </div>
+  )
+}
+
+function UiKit() {
+  const variants = ["primary", "secondary"] as const
+  const sizes = ["sm", "md", "lg", "xl"] as const
+  return (
+    <>
+      <h1 className="text-xl">UiKit - Variants & Sizes</h1>
+      <div className="grid grid-cols-2 gap-2">
+        {variants.map((variant) =>
+          sizes.map((size) => (
+            // eslint-disable-next-line
+            <Button key={variant + "-" + size} variant={variant} size={size}>
+              button {variant} {size}
+            </Button>
+          ))
+        )}
+      </div>
+    </>
   )
 }

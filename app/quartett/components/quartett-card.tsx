@@ -12,7 +12,7 @@ export function CardTitle({ car: { brand, model, year } }: { car: Car }) {
   )
 }
 export function QuartettCard({ car }: { car: Car }) {
-  const { image, brand, model, year } = car
+  const { image } = car
   return (
     <div className="w-[400px] p-3 rounded-2xl bg-white shadow-2xl flex flex-col gap-2">
       <CardTitle car={car} />
