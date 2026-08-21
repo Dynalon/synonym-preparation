@@ -1,4 +1,4 @@
-import { Car } from "../types"
+import { Car, CarStats } from "../types"
 
 export function QuartettCard({ car }: { car: Car }) {
   const { image, brand, model, year } = car
@@ -11,7 +11,32 @@ export function QuartettCard({ car }: { car: Car }) {
         <span className="text-gray-500 text-sm shrink-0">{year}</span>
       </div>
       <img src={`/cars/${image}`} className="w-full rounded-2xl" />
-      <div className=""></div>
+      <hr className="border-gray-200 my-3 w-[80%] mx-auto" />
+      <CarStatsGrid stats={car.stats} />
+    </div>
+  )
+}
+
+function CarStatKeyValue({ label, value }: { label: React.ReactNode; value: React.ReactNode }) {
+  return (
+    <div className="grid grid-cols-2 gap-1 border-1 border-gray-200 p-1 rounded-sm">
+      <span className="font-semibold text-sm">{label}</span>
+      <span className="text-right text-sm">{value}</span>
+    </div>
+  )
+}
+
+function CarStatsGrid({ stats }: { stats: CarStats }) {
+  return (
+    <div className="grid grid-cols-2 gap-x-1 gap-y-1">
+      <CarStatKeyValue label={"Accel. 0-100"} value={<>{stats.acceleration_0_100_s}s</>} />
+      <CarStatKeyValue label={"Cylinders"} value={stats.cylinders} />
+      <CarStatKeyValue label={"Displacement"} value={<>{stats.displacement_cc.toLocaleString()} cc</>} />
+      <CarStatKeyValue label={"max RPM"} value={stats.max_rpm.toLocaleString()} />
+      <CarStatKeyValue label={"Horsepowers"} value={stats.power_ps.toLocaleString()} />
+      <CarStatKeyValue label={"V_max"} value={<>{stats.top_speed_kmh} km/h</>} />
+      <CarStatKeyValue label={"Torque max"} value={<>{stats.torque_nm} Nm</>} />
+      <CarStatKeyValue label={"Weight"} value={<>{stats.weight_kg.toLocaleString()} km/h</>} />
     </div>
   )
 }
