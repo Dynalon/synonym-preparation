@@ -1,0 +1,2560 @@
+{
+  "game": "Car Top Trumps",
+  "fields": [
+    {
+      "key": "power_ps",
+      "label": "Power",
+      "unit": "PS",
+      "better": "higher"
+    },
+    {
+      "key": "torque_nm",
+      "label": "Torque",
+      "unit": "Nm",
+      "better": "higher"
+    },
+    {
+      "key": "displacement_cc",
+      "label": "Displacement",
+      "unit": "cc",
+      "better": "higher"
+    },
+    {
+      "key": "cylinders",
+      "label": "Cylinders",
+      "unit": "",
+      "better": "higher"
+    },
+    {
+      "key": "max_rpm",
+      "label": "Max Engine Speed",
+      "unit": "rpm",
+      "better": "higher"
+    },
+    {
+      "key": "top_speed_kmh",
+      "label": "Top Speed",
+      "unit": "km/h",
+      "better": "higher"
+    },
+    {
+      "key": "acceleration_0_100_s",
+      "label": "0-100 km/h",
+      "unit": "s",
+      "better": "lower"
+    },
+    {
+      "key": "weight_kg",
+      "label": "Kerb Weight",
+      "unit": "kg",
+      "better": "lower"
+    }
+  ],
+  "image_format": {
+    "width": 400,
+    "height": 300,
+    "aspect_ratio": "4:3"
+  },
+  "cards": [
+    {
+      "id": "001-bugatti-chiron",
+      "brand": "Bugatti",
+      "model": "Chiron",
+      "year": 2016,
+      "stats": {
+        "power_ps": 1500,
+        "torque_nm": 1600,
+        "displacement_cc": 7993,
+        "cylinders": 16,
+        "max_rpm": 6700,
+        "top_speed_kmh": 420,
+        "acceleration_0_100_s": 2.4,
+        "weight_kg": 1996
+      },
+      "image": "images/001-bugatti-chiron.jpg",
+      "_search_term": "Bugatti Chiron",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Bugatti Chiron, GIMS 2018, Le Grand-Saconnex (1X7A1765).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Bugatti_Chiron,_GIMS_2018,_Le_Grand-Saconnex_(1X7A1765).jpg",
+        "author": "Matti Blume",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "002-koenigsegg-jesko",
+      "brand": "Koenigsegg",
+      "model": "Jesko",
+      "year": 2019,
+      "stats": {
+        "power_ps": 1600,
+        "torque_nm": 1500,
+        "displacement_cc": 5065,
+        "cylinders": 8,
+        "max_rpm": 8500,
+        "top_speed_kmh": 480,
+        "acceleration_0_100_s": 2.5,
+        "weight_kg": 1420
+      },
+      "image": "images/002-koenigsegg-jesko.jpg",
+      "_search_term": "Koenigsegg Jesko",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Koenigsegg Jesko Auto Zuerich 2023 1X7A1382.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Koenigsegg_Jesko_Auto_Zuerich_2023_1X7A1382.jpg",
+        "author": "Alexander-93",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "003-koenigsegg-regera",
+      "brand": "Koenigsegg",
+      "model": "Regera",
+      "year": 2016,
+      "stats": {
+        "power_ps": 1500,
+        "torque_nm": 2000,
+        "displacement_cc": 5000,
+        "cylinders": 8,
+        "max_rpm": 8250,
+        "top_speed_kmh": 400,
+        "acceleration_0_100_s": 2.8,
+        "weight_kg": 1628
+      },
+      "image": "images/003-koenigsegg-regera.jpg",
+      "_search_term": "Koenigsegg Regera",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Koenigsegg Regera Front.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Koenigsegg_Regera_Front.jpg",
+        "author": "MrWalkr",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "004-aston-martin-valkyrie",
+      "brand": "Aston Martin",
+      "model": "Valkyrie",
+      "year": 2021,
+      "stats": {
+        "power_ps": 1160,
+        "torque_nm": 900,
+        "displacement_cc": 6500,
+        "cylinders": 12,
+        "max_rpm": 11100,
+        "top_speed_kmh": 350,
+        "acceleration_0_100_s": 2.5,
+        "weight_kg": 1270
+      },
+      "image": "images/004-aston-martin-valkyrie.jpg",
+      "_search_term": "Aston Martin Valkyrie",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2019 Aston Martin Valkyrie AMR Pro 6.5 Front.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2019_Aston_Martin_Valkyrie_AMR_Pro_6.5_Front.jpg",
+        "author": "Vauxford",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "005-mercedes-amg-one",
+      "brand": "Mercedes-AMG",
+      "model": "ONE",
+      "year": 2022,
+      "stats": {
+        "power_ps": 1063,
+        "torque_nm": 850,
+        "displacement_cc": 1600,
+        "cylinders": 6,
+        "max_rpm": 11000,
+        "top_speed_kmh": 352,
+        "acceleration_0_100_s": 2.9,
+        "weight_kg": 1695
+      },
+      "image": "images/005-mercedes-amg-one.jpg",
+      "_search_term": "Mercedes-AMG ONE",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Mercedes-AMG One IAA 2023 1X7A0454.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Mercedes-AMG_One_IAA_2023_1X7A0454.jpg",
+        "author": "Alexander-93",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "006-ferrari-sf90-stradale",
+      "brand": "Ferrari",
+      "model": "SF90 Stradale",
+      "year": 2019,
+      "stats": {
+        "power_ps": 1000,
+        "torque_nm": 800,
+        "displacement_cc": 3990,
+        "cylinders": 8,
+        "max_rpm": 8000,
+        "top_speed_kmh": 340,
+        "acceleration_0_100_s": 2.5,
+        "weight_kg": 1570
+      },
+      "image": "images/006-ferrari-sf90-stradale.jpg",
+      "_search_term": "Ferrari SF90",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Ferrari SF90 Spider, EMS 2024, Essen (P1032226).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Ferrari_SF90_Spider,_EMS_2024,_Essen_(P1032226).jpg",
+        "author": "Matti Blume",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "007-ferrari-812-superfast",
+      "brand": "Ferrari",
+      "model": "812 Superfast",
+      "year": 2017,
+      "stats": {
+        "power_ps": 800,
+        "torque_nm": 718,
+        "displacement_cc": 6496,
+        "cylinders": 12,
+        "max_rpm": 8900,
+        "top_speed_kmh": 340,
+        "acceleration_0_100_s": 2.9,
+        "weight_kg": 1525
+      },
+      "image": "images/007-ferrari-812-superfast.jpg",
+      "_search_term": "Ferrari 812 Superfast",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2019 Ferrari 812 Superfast - 6496cc 6.5 (800PS) Petrol - Giallo Modena - 01-2025, Front.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2019_Ferrari_812_Superfast_-_6496cc_6.5_(800PS)_Petrol_-_Giallo_Modena_-_01-2025,_Front.jpg",
+        "author": "Harvey Bold",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "008-pagani-huayra-bc",
+      "brand": "Pagani",
+      "model": "Huayra BC",
+      "year": 2019,
+      "stats": {
+        "power_ps": 802,
+        "torque_nm": 1050,
+        "displacement_cc": 5980,
+        "cylinders": 12,
+        "max_rpm": 6200,
+        "top_speed_kmh": 350,
+        "acceleration_0_100_s": 2.8,
+        "weight_kg": 1250
+      },
+      "image": "images/008-pagani-huayra-bc.jpg",
+      "_search_term": "Pagani Huayra BC",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2021 Pagani Huayra BC Roadster.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2021_Pagani_Huayra_BC_Roadster.jpg",
+        "author": "MrWalkr",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "009-lamborghini-aventador-svj",
+      "brand": "Lamborghini",
+      "model": "Aventador SVJ",
+      "year": 2018,
+      "stats": {
+        "power_ps": 770,
+        "torque_nm": 720,
+        "displacement_cc": 6498,
+        "cylinders": 12,
+        "max_rpm": 8700,
+        "top_speed_kmh": 350,
+        "acceleration_0_100_s": 2.8,
+        "weight_kg": 1525
+      },
+      "image": "images/009-lamborghini-aventador-svj.jpg",
+      "_search_term": "Lamborghini Aventador SVJ",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Lamborghini Aventador SVJ Roadster, GIMS 2019, Le Grand-Saconnex (GIMS0761).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Lamborghini_Aventador_SVJ_Roadster,_GIMS_2019,_Le_Grand-Saconnex_(GIMS0761).jpg",
+        "author": "Matti Blume",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "010-mclaren-765lt",
+      "brand": "McLaren",
+      "model": "765LT",
+      "year": 2020,
+      "stats": {
+        "power_ps": 765,
+        "torque_nm": 800,
+        "displacement_cc": 3994,
+        "cylinders": 8,
+        "max_rpm": 8500,
+        "top_speed_kmh": 330,
+        "acceleration_0_100_s": 2.8,
+        "weight_kg": 1339
+      },
+      "image": "images/010-mclaren-765lt.jpg",
+      "_search_term": "McLaren 765LT",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2023 Denver Auto Show Mike Ward McLaren 765LT right side view.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2023_Denver_Auto_Show_Mike_Ward_McLaren_765LT_right_side_view.jpg",
+        "author": "Corqe",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "011-mclaren-720s",
+      "brand": "McLaren",
+      "model": "720S",
+      "year": 2017,
+      "stats": {
+        "power_ps": 720,
+        "torque_nm": 770,
+        "displacement_cc": 3994,
+        "cylinders": 8,
+        "max_rpm": 8100,
+        "top_speed_kmh": 341,
+        "acceleration_0_100_s": 2.9,
+        "weight_kg": 1419
+      },
+      "image": "images/011-mclaren-720s.jpg",
+      "_search_term": "McLaren 720S",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "McLaren 720S, IAA 2017, (1Y7A3405).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:McLaren_720S,_IAA_2017,_(1Y7A3405).jpg",
+        "author": "Matti Blume",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "012-ferrari-f8-tributo",
+      "brand": "Ferrari",
+      "model": "F8 Tributo",
+      "year": 2019,
+      "stats": {
+        "power_ps": 720,
+        "torque_nm": 770,
+        "displacement_cc": 3902,
+        "cylinders": 8,
+        "max_rpm": 8000,
+        "top_speed_kmh": 340,
+        "acceleration_0_100_s": 2.9,
+        "weight_kg": 1435
+      },
+      "image": "images/012-ferrari-f8-tributo.jpg",
+      "_search_term": "Ferrari F8 Tributo",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Ferrari F8 Tributo, GIMS 2019, Le Grand-Saconnex (GIMS1319).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Ferrari_F8_Tributo,_GIMS_2019,_Le_Grand-Saconnex_(GIMS1319).jpg",
+        "author": "Matti Blume",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "013-aston-martin-dbs-superleggera",
+      "brand": "Aston Martin",
+      "model": "DBS Superleggera",
+      "year": 2018,
+      "stats": {
+        "power_ps": 725,
+        "torque_nm": 900,
+        "displacement_cc": 5204,
+        "cylinders": 12,
+        "max_rpm": 6500,
+        "top_speed_kmh": 340,
+        "acceleration_0_100_s": 3.4,
+        "weight_kg": 1693
+      },
+      "image": "images/013-aston-martin-dbs-superleggera.jpg",
+      "_search_term": "Aston Martin DBS Superleggera",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2018 Aston Martin DBS Superleggera V12 Automatic 5.2 Front.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2018_Aston_Martin_DBS_Superleggera_V12_Automatic_5.2_Front.jpg",
+        "author": "Vauxford",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "014-mercedes-amg-gt-black-series",
+      "brand": "Mercedes-AMG",
+      "model": "GT Black Series",
+      "year": 2020,
+      "stats": {
+        "power_ps": 730,
+        "torque_nm": 800,
+        "displacement_cc": 3982,
+        "cylinders": 8,
+        "max_rpm": 7200,
+        "top_speed_kmh": 325,
+        "acceleration_0_100_s": 3.2,
+        "weight_kg": 1540
+      },
+      "image": "images/014-mercedes-amg-gt-black-series.jpg",
+      "_search_term": "Mercedes-AMG GT Black Series",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Mercedes-AMG GT Black Series orange at Paris Motor Show 2024.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Mercedes-AMG_GT_Black_Series_orange_at_Paris_Motor_Show_2024.jpg",
+        "author": "Mathious Ier",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "015-lamborghini-huracan-sto",
+      "brand": "Lamborghini",
+      "model": "Huracan STO",
+      "year": 2021,
+      "stats": {
+        "power_ps": 640,
+        "torque_nm": 565,
+        "displacement_cc": 5204,
+        "cylinders": 10,
+        "max_rpm": 8500,
+        "top_speed_kmh": 310,
+        "acceleration_0_100_s": 3.0,
+        "weight_kg": 1339
+      },
+      "image": "images/015-lamborghini-huracan-sto.jpg",
+      "_search_term": "Lamborghini Huracan STO",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Lamborghini Huracan STO Auto Zuerich 2021 IMG 0266.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Lamborghini_Huracan_STO_Auto_Zuerich_2021_IMG_0266.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "016-porsche-911-gt3-rs",
+      "brand": "Porsche",
+      "model": "911 GT3 RS",
+      "year": 2022,
+      "stats": {
+        "power_ps": 525,
+        "torque_nm": 465,
+        "displacement_cc": 3996,
+        "cylinders": 6,
+        "max_rpm": 9000,
+        "top_speed_kmh": 296,
+        "acceleration_0_100_s": 3.2,
+        "weight_kg": 1450
+      },
+      "image": "images/016-porsche-911-gt3-rs.jpg",
+      "_search_term": "Porsche 911 GT3 RS 992",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2024 Porsche 911 GT3 RS 992.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2024_Porsche_911_GT3_RS_992.jpg",
+        "author": "Calreyn88",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "017-porsche-911-carrera-s",
+      "brand": "Porsche",
+      "model": "911 Carrera S",
+      "year": 2019,
+      "stats": {
+        "power_ps": 450,
+        "torque_nm": 530,
+        "displacement_cc": 2981,
+        "cylinders": 6,
+        "max_rpm": 7500,
+        "top_speed_kmh": 308,
+        "acceleration_0_100_s": 3.7,
+        "weight_kg": 1515
+      },
+      "image": "images/017-porsche-911-carrera-s.jpg",
+      "_search_term": "Porsche 992 Carrera S",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Porsche 992 Carrera S coupe IMG 5832.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Porsche_992_Carrera_S_coupe_IMG_5832.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "018-porsche-718-cayman-gt4",
+      "brand": "Porsche",
+      "model": "718 Cayman GT4",
+      "year": 2019,
+      "stats": {
+        "power_ps": 420,
+        "torque_nm": 420,
+        "displacement_cc": 3995,
+        "cylinders": 6,
+        "max_rpm": 8000,
+        "top_speed_kmh": 304,
+        "acceleration_0_100_s": 4.4,
+        "weight_kg": 1420
+      },
+      "image": "images/018-porsche-718-cayman-gt4.jpg",
+      "_search_term": "Porsche 718 Cayman GT4",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Porsche 718 Cayman GT4 Solitude Revival 2022 1X7A0107.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Porsche_718_Cayman_GT4_Solitude_Revival_2022_1X7A0107.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "019-audi-r8-v10-performance",
+      "brand": "Audi",
+      "model": "R8 V10 Performance",
+      "year": 2019,
+      "stats": {
+        "power_ps": 620,
+        "torque_nm": 580,
+        "displacement_cc": 5204,
+        "cylinders": 10,
+        "max_rpm": 8700,
+        "top_speed_kmh": 331,
+        "acceleration_0_100_s": 3.1,
+        "weight_kg": 1595
+      },
+      "image": "images/019-audi-r8-v10-performance.jpg",
+      "_search_term": "Audi R8 V10 performance",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2019 Audi R8 V10 performance quattro front NYIAS 2019.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2019_Audi_R8_V10_performance_quattro_front_NYIAS_2019.jpg",
+        "author": "Kevauto",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "020-ford-gt",
+      "brand": "Ford",
+      "model": "GT",
+      "year": 2017,
+      "stats": {
+        "power_ps": 656,
+        "torque_nm": 746,
+        "displacement_cc": 3497,
+        "cylinders": 6,
+        "max_rpm": 7000,
+        "top_speed_kmh": 348,
+        "acceleration_0_100_s": 3.0,
+        "weight_kg": 1385
+      },
+      "image": "images/020-ford-gt.jpg",
+      "_search_term": "Ford GT 2017",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2017 Ford GT front.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:2017_Ford_GT_front.JPG",
+        "author": "Latvian98",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "021-nissan-gt-r-nismo",
+      "brand": "Nissan",
+      "model": "GT-R Nismo",
+      "year": 2020,
+      "stats": {
+        "power_ps": 600,
+        "torque_nm": 652,
+        "displacement_cc": 3799,
+        "cylinders": 6,
+        "max_rpm": 6800,
+        "top_speed_kmh": 315,
+        "acceleration_0_100_s": 2.8,
+        "weight_kg": 1720
+      },
+      "image": "images/021-nissan-gt-r-nismo.jpg",
+      "_search_term": "Nissan GT-R Nismo",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Nissan GT-R Nismo (R35), 2022, front.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Nissan_GT-R_Nismo_(R35),_2022,_front.jpg",
+        "author": "Kazyakuruma",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "022-chevrolet-corvette-c8-z06",
+      "brand": "Chevrolet",
+      "model": "Corvette C8 Z06",
+      "year": 2023,
+      "stats": {
+        "power_ps": 679,
+        "torque_nm": 623,
+        "displacement_cc": 5463,
+        "cylinders": 8,
+        "max_rpm": 8600,
+        "top_speed_kmh": 312,
+        "acceleration_0_100_s": 2.7,
+        "weight_kg": 1583
+      },
+      "image": "images/022-chevrolet-corvette-c8-z06.jpg",
+      "_search_term": "Chevrolet Corvette C8 Z06",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2025 Chevrolet Corvette C8 Z06.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2025_Chevrolet_Corvette_C8_Z06.jpg",
+        "author": "Calreyn88",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "023-chevrolet-corvette-c8-stingray",
+      "brand": "Chevrolet",
+      "model": "Corvette C8 Stingray",
+      "year": 2020,
+      "stats": {
+        "power_ps": 502,
+        "torque_nm": 637,
+        "displacement_cc": 6162,
+        "cylinders": 8,
+        "max_rpm": 6500,
+        "top_speed_kmh": 312,
+        "acceleration_0_100_s": 3.0,
+        "weight_kg": 1527
+      },
+      "image": "images/023-chevrolet-corvette-c8-stingray.jpg",
+      "_search_term": "Chevrolet Corvette C8",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Chevrolet Corvette C8 IAA 2021 1X7A0156.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Chevrolet_Corvette_C8_IAA_2021_1X7A0156.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "024-dodge-viper-acr",
+      "brand": "Dodge",
+      "model": "Viper ACR",
+      "year": 2016,
+      "stats": {
+        "power_ps": 649,
+        "torque_nm": 814,
+        "displacement_cc": 8382,
+        "cylinders": 10,
+        "max_rpm": 6200,
+        "top_speed_kmh": 285,
+        "acceleration_0_100_s": 3.5,
+        "weight_kg": 1521
+      },
+      "image": "images/024-dodge-viper-acr.jpg",
+      "_search_term": "Dodge Viper ACR",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2016 Dodge Viper ACR with Extreme Aero package, front left, 06-16-2024.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2016_Dodge_Viper_ACR_with_Extreme_Aero_package,_front_left,_06-16-2024.jpg",
+        "author": "MercurySable99",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "025-dodge-challenger-srt-hellcat-redeye",
+      "brand": "Dodge",
+      "model": "Challenger SRT Hellcat Redeye",
+      "year": 2019,
+      "stats": {
+        "power_ps": 808,
+        "torque_nm": 959,
+        "displacement_cc": 6166,
+        "cylinders": 8,
+        "max_rpm": 6400,
+        "top_speed_kmh": 327,
+        "acceleration_0_100_s": 3.4,
+        "weight_kg": 2050
+      },
+      "image": "images/025-dodge-challenger-srt-hellcat-redeye.jpg",
+      "_search_term": "Dodge Challenger SRT Hellcat",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Dodge Challenger SRT Hellcat 2015-20180909-RM-171853.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Dodge_Challenger_SRT_Hellcat_2015-20180909-RM-171853.jpg",
+        "author": "Ermell",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "026-dodge-charger-srt-hellcat",
+      "brand": "Dodge",
+      "model": "Charger SRT Hellcat",
+      "year": 2016,
+      "stats": {
+        "power_ps": 717,
+        "torque_nm": 881,
+        "displacement_cc": 6166,
+        "cylinders": 8,
+        "max_rpm": 6200,
+        "top_speed_kmh": 328,
+        "acceleration_0_100_s": 3.7,
+        "weight_kg": 2072
+      },
+      "image": "images/026-dodge-charger-srt-hellcat.jpg",
+      "_search_term": "Dodge Charger SRT Hellcat",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2023 Dodge Charger SRT Hellcat Widebody Jailbreak in Granite Crystal Metallic, Front Right, 08-15-2023.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2023_Dodge_Charger_SRT_Hellcat_Widebody_Jailbreak_in_Granite_Crystal_Metallic,_Front_Right,_08-15-2023.jpg",
+        "author": "Elise240SX",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "027-ford-mustang-shelby-gt500",
+      "brand": "Ford",
+      "model": "Mustang Shelby GT500",
+      "year": 2020,
+      "stats": {
+        "power_ps": 771,
+        "torque_nm": 847,
+        "displacement_cc": 5163,
+        "cylinders": 8,
+        "max_rpm": 7500,
+        "top_speed_kmh": 290,
+        "acceleration_0_100_s": 3.5,
+        "weight_kg": 1900
+      },
+      "image": "images/027-ford-mustang-shelby-gt500.jpg",
+      "_search_term": "Ford Mustang Shelby GT500 2020",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2020 Ford Mustang Shelby GT500 Coupe, Cleveland Auto Show.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2020_Ford_Mustang_Shelby_GT500_Coupe,_Cleveland_Auto_Show.jpg",
+        "author": "Syntaxlord",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "028-ford-mustang-gt",
+      "brand": "Ford",
+      "model": "Mustang GT",
+      "year": 2018,
+      "stats": {
+        "power_ps": 450,
+        "torque_nm": 529,
+        "displacement_cc": 5038,
+        "cylinders": 8,
+        "max_rpm": 7500,
+        "top_speed_kmh": 250,
+        "acceleration_0_100_s": 4.3,
+        "weight_kg": 1743
+      },
+      "image": "images/028-ford-mustang-gt.jpg",
+      "_search_term": "Ford Mustang GT 2018",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2018 Ford Mustang GT 5.0 Front.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2018_Ford_Mustang_GT_5.0_Front.jpg",
+        "author": "Vauxford",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "029-chevrolet-camaro-zl1",
+      "brand": "Chevrolet",
+      "model": "Camaro ZL1",
+      "year": 2017,
+      "stats": {
+        "power_ps": 659,
+        "torque_nm": 881,
+        "displacement_cc": 6162,
+        "cylinders": 8,
+        "max_rpm": 6400,
+        "top_speed_kmh": 318,
+        "acceleration_0_100_s": 3.5,
+        "weight_kg": 1867
+      },
+      "image": "images/029-chevrolet-camaro-zl1.jpg",
+      "_search_term": "Chevrolet Camaro ZL1",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2018 Chevrolet Camaro ZL1 1LE SCD 24.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2018_Chevrolet_Camaro_ZL1_1LE_SCD_24.jpg",
+        "author": "MrWalkr",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "030-cadillac-ct5-v-blackwing",
+      "brand": "Cadillac",
+      "model": "CT5-V Blackwing",
+      "year": 2021,
+      "stats": {
+        "power_ps": 668,
+        "torque_nm": 893,
+        "displacement_cc": 6162,
+        "cylinders": 8,
+        "max_rpm": 6500,
+        "top_speed_kmh": 322,
+        "acceleration_0_100_s": 3.7,
+        "weight_kg": 1897
+      },
+      "image": "images/030-cadillac-ct5-v-blackwing.jpg",
+      "_search_term": "Cadillac CT5-V Blackwing",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Cadillac CT5-V Blackwing 6DC79 Black Raven (17).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Cadillac_CT5-V_Blackwing_6DC79_Black_Raven_(17).jpg",
+        "author": "Damian B Oh",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "031-bmw-m8-competition",
+      "brand": "BMW",
+      "model": "M8 Competition",
+      "year": 2019,
+      "stats": {
+        "power_ps": 625,
+        "torque_nm": 750,
+        "displacement_cc": 4395,
+        "cylinders": 8,
+        "max_rpm": 7200,
+        "top_speed_kmh": 305,
+        "acceleration_0_100_s": 3.2,
+        "weight_kg": 1885
+      },
+      "image": "images/031-bmw-m8-competition.jpg",
+      "_search_term": "BMW M8 Competition",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2019 BMW M8 Competition Front.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2019_BMW_M8_Competition_Front.jpg",
+        "author": "Vauxford",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "032-bmw-m5-cs",
+      "brand": "BMW",
+      "model": "M5 CS",
+      "year": 2021,
+      "stats": {
+        "power_ps": 635,
+        "torque_nm": 750,
+        "displacement_cc": 4395,
+        "cylinders": 8,
+        "max_rpm": 7200,
+        "top_speed_kmh": 305,
+        "acceleration_0_100_s": 3.0,
+        "weight_kg": 1825
+      },
+      "image": "images/032-bmw-m5-cs.jpg",
+      "_search_term": "BMW M5 CS",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2021 BMW M5 CS Auto gfos25.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2021_BMW_M5_CS_Auto_gfos25.jpg",
+        "author": "Calreyn88",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "033-bmw-m3-competition",
+      "brand": "BMW",
+      "model": "M3 Competition",
+      "year": 2021,
+      "stats": {
+        "power_ps": 510,
+        "torque_nm": 650,
+        "displacement_cc": 2993,
+        "cylinders": 6,
+        "max_rpm": 7200,
+        "top_speed_kmh": 290,
+        "acceleration_0_100_s": 3.9,
+        "weight_kg": 1730
+      },
+      "image": "images/033-bmw-m3-competition.jpg",
+      "_search_term": "BMW M3 G80",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "BMW M3 Competition G80 LCI in La Jolla, California (May 14, 2026).png",
+        "page": "https://commons.wikimedia.org/wiki/File:BMW_M3_Competition_G80_LCI_in_La_Jolla,_California_(May_14,_2026).png",
+        "author": "Tomtom7777",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "034-bmw-m2-competition",
+      "brand": "BMW",
+      "model": "M2 Competition",
+      "year": 2018,
+      "stats": {
+        "power_ps": 410,
+        "torque_nm": 550,
+        "displacement_cc": 2979,
+        "cylinders": 6,
+        "max_rpm": 7600,
+        "top_speed_kmh": 280,
+        "acceleration_0_100_s": 4.2,
+        "weight_kg": 1550
+      },
+      "image": "images/034-bmw-m2-competition.jpg",
+      "_search_term": "BMW M2 Competition",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "BMW M2 Competition (F87) front.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:BMW_M2_Competition_(F87)_front.jpg",
+        "author": "Tokumeigakarinoaoshima",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "035-mercedes-amg-e-63-s",
+      "brand": "Mercedes-AMG",
+      "model": "E 63 S",
+      "year": 2017,
+      "stats": {
+        "power_ps": 612,
+        "torque_nm": 850,
+        "displacement_cc": 3982,
+        "cylinders": 8,
+        "max_rpm": 6500,
+        "top_speed_kmh": 300,
+        "acceleration_0_100_s": 3.4,
+        "weight_kg": 1955
+      },
+      "image": "images/035-mercedes-amg-e-63-s.jpg",
+      "_search_term": "Mercedes-AMG E 63 S",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Mercedes-AMG GT 63 S E Performance IAA 2021 1X7A0201.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Mercedes-AMG_GT_63_S_E_Performance_IAA_2021_1X7A0201.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "036-mercedes-amg-a-45-s",
+      "brand": "Mercedes-AMG",
+      "model": "A 45 S",
+      "year": 2019,
+      "stats": {
+        "power_ps": 421,
+        "torque_nm": 500,
+        "displacement_cc": 1991,
+        "cylinders": 4,
+        "max_rpm": 7200,
+        "top_speed_kmh": 270,
+        "acceleration_0_100_s": 3.9,
+        "weight_kg": 1550
+      },
+      "image": "images/036-mercedes-amg-a-45-s.jpg",
+      "_search_term": "Mercedes-AMG A 45 S",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Mercedes-AMG CLA 45 S 4MATIC+ (C118) at IAA 2019 IMG 0519.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Mercedes-AMG_CLA_45_S_4MATIC%2B_(C118)_at_IAA_2019_IMG_0519.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "037-audi-rs6-avant",
+      "brand": "Audi",
+      "model": "RS6 Avant",
+      "year": 2019,
+      "stats": {
+        "power_ps": 600,
+        "torque_nm": 800,
+        "displacement_cc": 3996,
+        "cylinders": 8,
+        "max_rpm": 6250,
+        "top_speed_kmh": 305,
+        "acceleration_0_100_s": 3.6,
+        "weight_kg": 2075
+      },
+      "image": "images/037-audi-rs6-avant.jpg",
+      "_search_term": "Audi RS6 C8",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Audi RS6 Avant C8 at IAA 2019 IMG 0194.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Audi_RS6_Avant_C8_at_IAA_2019_IMG_0194.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "038-audi-rs3-sportback",
+      "brand": "Audi",
+      "model": "RS3 Sportback",
+      "year": 2021,
+      "stats": {
+        "power_ps": 400,
+        "torque_nm": 500,
+        "displacement_cc": 2480,
+        "cylinders": 5,
+        "max_rpm": 7000,
+        "top_speed_kmh": 290,
+        "acceleration_0_100_s": 3.8,
+        "weight_kg": 1570
+      },
+      "image": "images/038-audi-rs3-sportback.jpg",
+      "_search_term": "Audi RS3 8Y",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Audi RS3 8Y Sedan 1X7A7298.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Audi_RS3_8Y_Sedan_1X7A7298.jpg",
+        "author": "Alexander-93",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "039-jaguar-f-type-svr",
+      "brand": "Jaguar",
+      "model": "F-Type SVR",
+      "year": 2016,
+      "stats": {
+        "power_ps": 575,
+        "torque_nm": 700,
+        "displacement_cc": 4999,
+        "cylinders": 8,
+        "max_rpm": 6500,
+        "top_speed_kmh": 322,
+        "acceleration_0_100_s": 3.7,
+        "weight_kg": 1705
+      },
+      "image": "images/039-jaguar-f-type-svr.jpg",
+      "_search_term": "Jaguar F-Type SVR",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Jaguar F-TYPE SVR Coupé (X152) front.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Jaguar_F-TYPE_SVR_Coup%C3%A9_(X152)_front.jpg",
+        "author": "Tokumeigakarinoaoshima",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "040-jaguar-xe-sv-project-8",
+      "brand": "Jaguar",
+      "model": "XE SV Project 8",
+      "year": 2017,
+      "stats": {
+        "power_ps": 600,
+        "torque_nm": 700,
+        "displacement_cc": 4999,
+        "cylinders": 8,
+        "max_rpm": 6500,
+        "top_speed_kmh": 322,
+        "acceleration_0_100_s": 3.7,
+        "weight_kg": 1745
+      },
+      "image": "images/040-jaguar-xe-sv-project-8.jpg",
+      "_search_term": "Jaguar XE SV Project 8",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Jaguar XE SV Project 8 at IAA 2019 IMG 0539.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Jaguar_XE_SV_Project_8_at_IAA_2019_IMG_0539.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "041-alfa-romeo-giulia-quadrifoglio",
+      "brand": "Alfa Romeo",
+      "model": "Giulia Quadrifoglio",
+      "year": 2016,
+      "stats": {
+        "power_ps": 510,
+        "torque_nm": 600,
+        "displacement_cc": 2891,
+        "cylinders": 6,
+        "max_rpm": 6500,
+        "top_speed_kmh": 307,
+        "acceleration_0_100_s": 3.9,
+        "weight_kg": 1620
+      },
+      "image": "images/041-alfa-romeo-giulia-quadrifoglio.jpg",
+      "_search_term": "Alfa Romeo Giulia Quadrifoglio",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Alfa Romeo Giulia Quadrifoglio front.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Alfa_Romeo_Giulia_Quadrifoglio_front.jpg",
+        "author": "Rutger van der Maar",
+        "license": "CC BY 2.0"
+      }
+    },
+    {
+      "id": "042-maserati-quattroporte-gts",
+      "brand": "Maserati",
+      "model": "Quattroporte GTS",
+      "year": 2016,
+      "stats": {
+        "power_ps": 530,
+        "torque_nm": 710,
+        "displacement_cc": 3799,
+        "cylinders": 8,
+        "max_rpm": 6800,
+        "top_speed_kmh": 310,
+        "acceleration_0_100_s": 4.7,
+        "weight_kg": 1900
+      },
+      "image": "images/042-maserati-quattroporte-gts.jpg",
+      "_search_term": "Maserati Quattroporte VI",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2018 Maserati Quattroporte VI S in Blu Pozzi, front right.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2018_Maserati_Quattroporte_VI_S_in_Blu_Pozzi,_front_right.jpg",
+        "author": "Ethan Llamas",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "043-lexus-lc-500",
+      "brand": "Lexus",
+      "model": "LC 500",
+      "year": 2017,
+      "stats": {
+        "power_ps": 477,
+        "torque_nm": 540,
+        "displacement_cc": 4969,
+        "cylinders": 8,
+        "max_rpm": 7300,
+        "top_speed_kmh": 270,
+        "acceleration_0_100_s": 4.4,
+        "weight_kg": 1935
+      },
+      "image": "images/043-lexus-lc-500.jpg",
+      "_search_term": "Lexus LC 500",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2023 Lexus LC 500 in White Nova Glass Flake, front right.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2023_Lexus_LC_500_in_White_Nova_Glass_Flake,_front_right.jpg",
+        "author": "Ethan Llamas",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "044-lexus-ls-500",
+      "brand": "Lexus",
+      "model": "LS 500",
+      "year": 2017,
+      "stats": {
+        "power_ps": 421,
+        "torque_nm": 600,
+        "displacement_cc": 3444,
+        "cylinders": 6,
+        "max_rpm": 6600,
+        "top_speed_kmh": 250,
+        "acceleration_0_100_s": 5.0,
+        "weight_kg": 2160
+      },
+      "image": "images/044-lexus-ls-500.jpg",
+      "_search_term": "Lexus LS 500",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Lexus LS 500, Frankfurt Motor Show 2017.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Lexus_LS_500,_Frankfurt_Motor_Show_2017.jpg",
+        "author": "LennartB",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "045-bentley-continental-gt-speed",
+      "brand": "Bentley",
+      "model": "Continental GT Speed",
+      "year": 2021,
+      "stats": {
+        "power_ps": 659,
+        "torque_nm": 900,
+        "displacement_cc": 5950,
+        "cylinders": 12,
+        "max_rpm": 6000,
+        "top_speed_kmh": 335,
+        "acceleration_0_100_s": 3.6,
+        "weight_kg": 2273
+      },
+      "image": "images/045-bentley-continental-gt-speed.jpg",
+      "_search_term": "Bentley Continental GT Speed",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2016 Bentley Continental GT Speed 0703.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2016_Bentley_Continental_GT_Speed_0703.jpg",
+        "author": "QV",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "046-bentley-bentayga-speed",
+      "brand": "Bentley",
+      "model": "Bentayga Speed",
+      "year": 2019,
+      "stats": {
+        "power_ps": 635,
+        "torque_nm": 900,
+        "displacement_cc": 5950,
+        "cylinders": 12,
+        "max_rpm": 6000,
+        "top_speed_kmh": 306,
+        "acceleration_0_100_s": 3.9,
+        "weight_kg": 2495
+      },
+      "image": "images/046-bentley-bentayga-speed.jpg",
+      "_search_term": "Bentley Bentayga Speed",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Bentley Bentayga Speed Genf 2019 1Y7A5885.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Bentley_Bentayga_Speed_Genf_2019_1Y7A5885.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "047-rolls-royce-phantom-viii",
+      "brand": "Rolls-Royce",
+      "model": "Phantom VIII",
+      "year": 2017,
+      "stats": {
+        "power_ps": 571,
+        "torque_nm": 900,
+        "displacement_cc": 6749,
+        "cylinders": 12,
+        "max_rpm": 5000,
+        "top_speed_kmh": 250,
+        "acceleration_0_100_s": 5.3,
+        "weight_kg": 2560
+      },
+      "image": "images/047-rolls-royce-phantom-viii.jpg",
+      "_search_term": "Rolls-Royce Phantom VIII",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Rolls-Royce Phantom VIII Series I IMG 9101.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Rolls-Royce_Phantom_VIII_Series_I_IMG_9101.jpg",
+        "author": "Alexander-93",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "048-rolls-royce-cullinan",
+      "brand": "Rolls-Royce",
+      "model": "Cullinan",
+      "year": 2018,
+      "stats": {
+        "power_ps": 571,
+        "torque_nm": 850,
+        "displacement_cc": 6749,
+        "cylinders": 12,
+        "max_rpm": 5000,
+        "top_speed_kmh": 250,
+        "acceleration_0_100_s": 5.2,
+        "weight_kg": 2660
+      },
+      "image": "images/048-rolls-royce-cullinan.jpg",
+      "_search_term": "Rolls-Royce Cullinan",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2024 Rolls-Royce Cullinan V12 - 6749cc 6.75 (571PS) Petrol - Salamanca Blue - 01-2025, Side.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2024_Rolls-Royce_Cullinan_V12_-_6749cc_6.75_(571PS)_Petrol_-_Salamanca_Blue_-_01-2025,_Side.jpg",
+        "author": "Harvey Bold",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "049-mercedes-maybach-s-680",
+      "brand": "Mercedes-Maybach",
+      "model": "S 680",
+      "year": 2021,
+      "stats": {
+        "power_ps": 612,
+        "torque_nm": 900,
+        "displacement_cc": 5980,
+        "cylinders": 12,
+        "max_rpm": 5500,
+        "top_speed_kmh": 250,
+        "acceleration_0_100_s": 4.5,
+        "weight_kg": 2360
+      },
+      "image": "images/049-mercedes-maybach-s-680.jpg",
+      "_search_term": "Mercedes-Maybach S 680",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Mercedes-Maybach Z223 680 1X7A5831.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Mercedes-Maybach_Z223_680_1X7A5831.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "050-lamborghini-urus",
+      "brand": "Lamborghini",
+      "model": "Urus",
+      "year": 2018,
+      "stats": {
+        "power_ps": 650,
+        "torque_nm": 850,
+        "displacement_cc": 3996,
+        "cylinders": 8,
+        "max_rpm": 6800,
+        "top_speed_kmh": 305,
+        "acceleration_0_100_s": 3.6,
+        "weight_kg": 2200
+      },
+      "image": "images/050-lamborghini-urus.jpg",
+      "_search_term": "Lamborghini Urus",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Lamborghini Urus at IAA 2019 IMG 0175.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Lamborghini_Urus_at_IAA_2019_IMG_0175.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "051-porsche-cayenne-turbo-gt",
+      "brand": "Porsche",
+      "model": "Cayenne Turbo GT",
+      "year": 2021,
+      "stats": {
+        "power_ps": 640,
+        "torque_nm": 850,
+        "displacement_cc": 3996,
+        "cylinders": 8,
+        "max_rpm": 6800,
+        "top_speed_kmh": 300,
+        "acceleration_0_100_s": 3.3,
+        "weight_kg": 2220
+      },
+      "image": "images/051-porsche-cayenne-turbo-gt.jpg",
+      "_search_term": "Porsche Cayenne Turbo GT",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Porsche Cayenne Turbo GT Auto Zuerich 2021 IMG 0298.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Porsche_Cayenne_Turbo_GT_Auto_Zuerich_2021_IMG_0298.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "052-aston-martin-dbx707",
+      "brand": "Aston Martin",
+      "model": "DBX707",
+      "year": 2022,
+      "stats": {
+        "power_ps": 707,
+        "torque_nm": 900,
+        "displacement_cc": 3982,
+        "cylinders": 8,
+        "max_rpm": 6500,
+        "top_speed_kmh": 310,
+        "acceleration_0_100_s": 3.3,
+        "weight_kg": 2245
+      },
+      "image": "images/052-aston-martin-dbx707.jpg",
+      "_search_term": "Aston Martin DBX707",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Aston Martin DBX707 (Rear view) at Japan Mobility Show Kansai 2025.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Aston_Martin_DBX707_(Rear_view)_at_Japan_Mobility_Show_Kansai_2025.jpg",
+        "author": "Aos.1905",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "053-bmw-x5-m-competition",
+      "brand": "BMW",
+      "model": "X5 M Competition",
+      "year": 2019,
+      "stats": {
+        "power_ps": 625,
+        "torque_nm": 750,
+        "displacement_cc": 4395,
+        "cylinders": 8,
+        "max_rpm": 7200,
+        "top_speed_kmh": 290,
+        "acceleration_0_100_s": 3.8,
+        "weight_kg": 2380
+      },
+      "image": "images/053-bmw-x5-m-competition.jpg",
+      "_search_term": "BMW X5 M F95",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "BMW X5 M (F95) China.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:BMW_X5_M_(F95)_China.jpg",
+        "author": "Dinkun Chen",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "054-mercedes-amg-g-63",
+      "brand": "Mercedes-AMG",
+      "model": "G 63",
+      "year": 2018,
+      "stats": {
+        "power_ps": 585,
+        "torque_nm": 850,
+        "displacement_cc": 3982,
+        "cylinders": 8,
+        "max_rpm": 6000,
+        "top_speed_kmh": 220,
+        "acceleration_0_100_s": 4.5,
+        "weight_kg": 2560
+      },
+      "image": "images/054-mercedes-amg-g-63.jpg",
+      "_search_term": "Mercedes-AMG G 63 W463",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "The frontview of Mercedes-AMG G 63 (W463) ver.wrapped automobile.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:The_frontview_of_Mercedes-AMG_G_63_(W463)_ver.wrapped_automobile.jpg",
+        "author": "Tokumeigakarinoaoshima",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "055-jeep-grand-cherokee-trackhawk",
+      "brand": "Jeep",
+      "model": "Grand Cherokee Trackhawk",
+      "year": 2017,
+      "stats": {
+        "power_ps": 717,
+        "torque_nm": 875,
+        "displacement_cc": 6166,
+        "cylinders": 8,
+        "max_rpm": 6000,
+        "top_speed_kmh": 290,
+        "acceleration_0_100_s": 3.7,
+        "weight_kg": 2433
+      },
+      "image": "images/055-jeep-grand-cherokee-trackhawk.jpg",
+      "_search_term": "Jeep Grand Cherokee Trackhawk",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Jeep Grand Cherokee Trackhawk Genf 2018.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Jeep_Grand_Cherokee_Trackhawk_Genf_2018.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "056-range-rover-sport-svr",
+      "brand": "Range Rover",
+      "model": "Sport SVR",
+      "year": 2018,
+      "stats": {
+        "power_ps": 575,
+        "torque_nm": 700,
+        "displacement_cc": 4999,
+        "cylinders": 8,
+        "max_rpm": 6500,
+        "top_speed_kmh": 283,
+        "acceleration_0_100_s": 4.5,
+        "weight_kg": 2310
+      },
+      "image": "images/056-range-rover-sport-svr.jpg",
+      "_search_term": "Range Rover Sport SVR",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Range Rover Sport SVR, IAA 2017, Frankfurt (1Y7A3071).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Range_Rover_Sport_SVR,_IAA_2017,_Frankfurt_(1Y7A3071).jpg",
+        "author": "Matti Blume",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "057-maserati-levante-trofeo",
+      "brand": "Maserati",
+      "model": "Levante Trofeo",
+      "year": 2018,
+      "stats": {
+        "power_ps": 580,
+        "torque_nm": 730,
+        "displacement_cc": 3799,
+        "cylinders": 8,
+        "max_rpm": 6750,
+        "top_speed_kmh": 302,
+        "acceleration_0_100_s": 4.1,
+        "weight_kg": 2170
+      },
+      "image": "images/057-maserati-levante-trofeo.jpg",
+      "_search_term": "Maserati Levante Trofeo",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Maserati Levante Trofeo, Paris Motor Show 2018, IMG 0663.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Maserati_Levante_Trofeo,_Paris_Motor_Show_2018,_IMG_0663.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "058-alfa-romeo-stelvio-quadrifoglio",
+      "brand": "Alfa Romeo",
+      "model": "Stelvio Quadrifoglio",
+      "year": 2017,
+      "stats": {
+        "power_ps": 510,
+        "torque_nm": 600,
+        "displacement_cc": 2891,
+        "cylinders": 6,
+        "max_rpm": 6500,
+        "top_speed_kmh": 283,
+        "acceleration_0_100_s": 3.8,
+        "weight_kg": 1830
+      },
+      "image": "images/058-alfa-romeo-stelvio-quadrifoglio.jpg",
+      "_search_term": "Alfa Romeo Stelvio Quadrifoglio",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2019 Alfa Romeo Stelvio Quadrifoglio 4WD (Vesuvio Gray), front right.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2019_Alfa_Romeo_Stelvio_Quadrifoglio_4WD_(Vesuvio_Gray),_front_right.jpg",
+        "author": "Mr.choppers",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "059-audi-sq7-tdi",
+      "brand": "Audi",
+      "model": "SQ7 TDI",
+      "year": 2016,
+      "stats": {
+        "power_ps": 435,
+        "torque_nm": 900,
+        "displacement_cc": 3956,
+        "cylinders": 8,
+        "max_rpm": 4750,
+        "top_speed_kmh": 250,
+        "acceleration_0_100_s": 4.8,
+        "weight_kg": 2330
+      },
+      "image": "images/059-audi-sq7-tdi.jpg",
+      "_search_term": "Audi SQ7",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2021 Audi SQ7 front.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2021_Audi_SQ7_front.jpg",
+        "author": "LuvsMG481",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "060-cadillac-escalade-v",
+      "brand": "Cadillac",
+      "model": "Escalade-V",
+      "year": 2022,
+      "stats": {
+        "power_ps": 691,
+        "torque_nm": 1064,
+        "displacement_cc": 6162,
+        "cylinders": 8,
+        "max_rpm": 6000,
+        "top_speed_kmh": 240,
+        "acceleration_0_100_s": 4.4,
+        "weight_kg": 2880
+      },
+      "image": "images/060-cadillac-escalade-v.jpg",
+      "_search_term": "Cadillac Escalade V",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "23 Cadillac Escalade-V Base - Scottsdale AZ 2024.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:23_Cadillac_Escalade-V_Base_-_Scottsdale_AZ_2024.jpg",
+        "author": "HJUdall",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "061-ram-1500-trx",
+      "brand": "Ram",
+      "model": "1500 TRX",
+      "year": 2021,
+      "stats": {
+        "power_ps": 712,
+        "torque_nm": 881,
+        "displacement_cc": 6166,
+        "cylinders": 8,
+        "max_rpm": 6300,
+        "top_speed_kmh": 190,
+        "acceleration_0_100_s": 4.5,
+        "weight_kg": 2900
+      },
+      "image": "images/061-ram-1500-trx.jpg",
+      "_search_term": "Ram 1500 TRX",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2023 Ram 1500 TRX Havoc Edition in Baja Yellow Clearcoat, Front Left, 04-30-2023.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2023_Ram_1500_TRX_Havoc_Edition_in_Baja_Yellow_Clearcoat,_Front_Left,_04-30-2023.jpg",
+        "author": "Elise240SX",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "062-ford-f-150-raptor",
+      "brand": "Ford",
+      "model": "F-150 Raptor",
+      "year": 2017,
+      "stats": {
+        "power_ps": 456,
+        "torque_nm": 691,
+        "displacement_cc": 3496,
+        "cylinders": 6,
+        "max_rpm": 6000,
+        "top_speed_kmh": 172,
+        "acceleration_0_100_s": 5.9,
+        "weight_kg": 2650
+      },
+      "image": "images/062-ford-f-150-raptor.jpg",
+      "_search_term": "Ford F-150 Raptor 2017",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2017 Ford F-150 Raptor Crew Cab.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2017_Ford_F-150_Raptor_Crew_Cab.jpg",
+        "author": "Bull-Doser",
+        "license": "Public domain"
+      }
+    },
+    {
+      "id": "063-porsche-panamera-turbo-s",
+      "brand": "Porsche",
+      "model": "Panamera Turbo S",
+      "year": 2020,
+      "stats": {
+        "power_ps": 630,
+        "torque_nm": 820,
+        "displacement_cc": 3996,
+        "cylinders": 8,
+        "max_rpm": 6800,
+        "top_speed_kmh": 315,
+        "acceleration_0_100_s": 3.1,
+        "weight_kg": 2170
+      },
+      "image": "images/063-porsche-panamera-turbo-s.jpg",
+      "_search_term": "Porsche Panamera Turbo S",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Porsche 971 Panamera Turbo S E-Hybrid Sport Turismo Classic-Gala 2021 1X7A0234.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Porsche_971_Panamera_Turbo_S_E-Hybrid_Sport_Turismo_Classic-Gala_2021_1X7A0234.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "064-caterham-seven-620r",
+      "brand": "Caterham",
+      "model": "Seven 620R",
+      "year": 2016,
+      "stats": {
+        "power_ps": 310,
+        "torque_nm": 300,
+        "displacement_cc": 1999,
+        "cylinders": 4,
+        "max_rpm": 7500,
+        "top_speed_kmh": 250,
+        "acceleration_0_100_s": 2.8,
+        "weight_kg": 610
+      },
+      "image": "images/064-caterham-seven-620r.jpg",
+      "_search_term": "Caterham Seven 620R",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2020 Caterham Seven 620R SCD 24.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2020_Caterham_Seven_620R_SCD_24.jpg",
+        "author": "MrWalkr",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "065-ariel-atom-4",
+      "brand": "Ariel",
+      "model": "Atom 4",
+      "year": 2018,
+      "stats": {
+        "power_ps": 320,
+        "torque_nm": 420,
+        "displacement_cc": 1996,
+        "cylinders": 4,
+        "max_rpm": 7200,
+        "top_speed_kmh": 261,
+        "acceleration_0_100_s": 2.8,
+        "weight_kg": 595
+      },
+      "image": "images/065-ariel-atom-4.jpg",
+      "_search_term": "Ariel Atom 4",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2019 Ariel Atom 4.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2019_Ariel_Atom_4.jpg",
+        "author": "Calreyn88",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "066-ktm-x-bow-gt",
+      "brand": "KTM",
+      "model": "X-Bow GT",
+      "year": 2016,
+      "stats": {
+        "power_ps": 300,
+        "torque_nm": 400,
+        "displacement_cc": 1984,
+        "cylinders": 4,
+        "max_rpm": 6500,
+        "top_speed_kmh": 231,
+        "acceleration_0_100_s": 3.9,
+        "weight_kg": 875
+      },
+      "image": "images/066-ktm-x-bow-gt.jpg",
+      "_search_term": "KTM X-Bow GT",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Geneva MotorShow 2013 - KTM X-bow GT blue front.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Geneva_MotorShow_2013_-_KTM_X-bow_GT_blue_front.jpg",
+        "author": "Clément Bucco-Lechat",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "067-donkervoort-d8-gto-jd70",
+      "brand": "Donkervoort",
+      "model": "D8 GTO-JD70",
+      "year": 2019,
+      "stats": {
+        "power_ps": 415,
+        "torque_nm": 521,
+        "displacement_cc": 2480,
+        "cylinders": 5,
+        "max_rpm": 6500,
+        "top_speed_kmh": 280,
+        "acceleration_0_100_s": 2.7,
+        "weight_kg": 750
+      },
+      "image": "images/067-donkervoort-d8-gto-jd70.jpg",
+      "_search_term": "Donkervoort D8 GTO",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Donkervoort D8 GTO-JD70 IAA 2021 1X7A0248.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Donkervoort_D8_GTO-JD70_IAA_2021_1X7A0248.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "068-lotus-emira",
+      "brand": "Lotus",
+      "model": "Emira",
+      "year": 2022,
+      "stats": {
+        "power_ps": 405,
+        "torque_nm": 420,
+        "displacement_cc": 3456,
+        "cylinders": 6,
+        "max_rpm": 6800,
+        "top_speed_kmh": 290,
+        "acceleration_0_100_s": 4.3,
+        "weight_kg": 1405
+      },
+      "image": "images/068-lotus-emira.jpg",
+      "_search_term": "Lotus Emira",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Lotus Emira, IAA 2025, Munich (20250909-P1050690).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Lotus_Emira,_IAA_2025,_Munich_(20250909-P1050690).jpg",
+        "author": "Matti Blume",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "069-alpine-a110",
+      "brand": "Alpine",
+      "model": "A110",
+      "year": 2017,
+      "stats": {
+        "power_ps": 252,
+        "torque_nm": 320,
+        "displacement_cc": 1798,
+        "cylinders": 4,
+        "max_rpm": 6400,
+        "top_speed_kmh": 250,
+        "acceleration_0_100_s": 4.5,
+        "weight_kg": 1103
+      },
+      "image": "images/069-alpine-a110.jpg",
+      "_search_term": "Alpine A110",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Alpine A110 vue de profil.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Alpine_A110_vue_de_profil.jpg",
+        "author": "Kakoula10",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "070-toyota-gr-supra",
+      "brand": "Toyota",
+      "model": "GR Supra",
+      "year": 2019,
+      "stats": {
+        "power_ps": 340,
+        "torque_nm": 500,
+        "displacement_cc": 2998,
+        "cylinders": 6,
+        "max_rpm": 6500,
+        "top_speed_kmh": 250,
+        "acceleration_0_100_s": 4.3,
+        "weight_kg": 1520
+      },
+      "image": "images/070-toyota-gr-supra.jpg",
+      "_search_term": "Toyota GR Supra 2019",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Toyota Supra GR Genf 2019 1Y7A5650.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Toyota_Supra_GR_Genf_2019_1Y7A5650.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "071-toyota-gr86",
+      "brand": "Toyota",
+      "model": "GR86",
+      "year": 2021,
+      "stats": {
+        "power_ps": 234,
+        "torque_nm": 250,
+        "displacement_cc": 2387,
+        "cylinders": 4,
+        "max_rpm": 7400,
+        "top_speed_kmh": 226,
+        "acceleration_0_100_s": 6.3,
+        "weight_kg": 1275
+      },
+      "image": "images/071-toyota-gr86.jpg",
+      "_search_term": "Toyota GR86",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2022 Toyota GR86 Premium in Halo, Front Right, 04-10-2022.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2022_Toyota_GR86_Premium_in_Halo,_Front_Right,_04-10-2022.jpg",
+        "author": "Elise240SX",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "072-toyota-gr-yaris",
+      "brand": "Toyota",
+      "model": "GR Yaris",
+      "year": 2020,
+      "stats": {
+        "power_ps": 261,
+        "torque_nm": 360,
+        "displacement_cc": 1618,
+        "cylinders": 3,
+        "max_rpm": 6500,
+        "top_speed_kmh": 230,
+        "acceleration_0_100_s": 5.5,
+        "weight_kg": 1280
+      },
+      "image": "images/072-toyota-gr-yaris.jpg",
+      "_search_term": "Toyota GR Yaris",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Toyota GR Yaris RC (2024) Leonberg 2024 IMG 1063.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Toyota_GR_Yaris_RC_(2024)_Leonberg_2024_IMG_1063.jpg",
+        "author": "Alexander-93",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "073-subaru-wrx-sti",
+      "brand": "Subaru",
+      "model": "WRX STI",
+      "year": 2018,
+      "stats": {
+        "power_ps": 300,
+        "torque_nm": 407,
+        "displacement_cc": 2457,
+        "cylinders": 4,
+        "max_rpm": 6700,
+        "top_speed_kmh": 255,
+        "acceleration_0_100_s": 5.2,
+        "weight_kg": 1534
+      },
+      "image": "images/073-subaru-wrx-sti.jpg",
+      "_search_term": "Subaru WRX STI 2018",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2018 Subaru WRX STi Front.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2018_Subaru_WRX_STi_Front.jpg",
+        "author": "Koenigseggvibes",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "074-mazda-mx-5-rf",
+      "brand": "Mazda",
+      "model": "MX-5 RF",
+      "year": 2016,
+      "stats": {
+        "power_ps": 160,
+        "torque_nm": 200,
+        "displacement_cc": 1998,
+        "cylinders": 4,
+        "max_rpm": 7000,
+        "top_speed_kmh": 219,
+        "acceleration_0_100_s": 7.3,
+        "weight_kg": 1075
+      },
+      "image": "images/074-mazda-mx-5-rf.jpg",
+      "_search_term": "Mazda MX-5 ND",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Mazda MX-5 ND Wien 26 July 2020 JM (1).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Mazda_MX-5_ND_Wien_26_July_2020_JM_(1).jpg",
+        "author": "Johannes Maximilian",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "075-honda-civic-type-r",
+      "brand": "Honda",
+      "model": "Civic Type R",
+      "year": 2017,
+      "stats": {
+        "power_ps": 320,
+        "torque_nm": 400,
+        "displacement_cc": 1996,
+        "cylinders": 4,
+        "max_rpm": 7000,
+        "top_speed_kmh": 272,
+        "acceleration_0_100_s": 5.7,
+        "weight_kg": 1380
+      },
+      "image": "images/075-honda-civic-type-r.jpg",
+      "_search_term": "Honda Civic Type R FK8",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2017 Honda Civic Type R FK8 in Championship White, front right, 08-04-2024.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2017_Honda_Civic_Type_R_FK8_in_Championship_White,_front_right,_08-04-2024.jpg",
+        "author": "Ethan Llamas",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "076-renault-megane-rs-trophy-r",
+      "brand": "Renault",
+      "model": "Megane RS Trophy-R",
+      "year": 2019,
+      "stats": {
+        "power_ps": 300,
+        "torque_nm": 400,
+        "displacement_cc": 1798,
+        "cylinders": 4,
+        "max_rpm": 6000,
+        "top_speed_kmh": 262,
+        "acceleration_0_100_s": 5.4,
+        "weight_kg": 1306
+      },
+      "image": "images/076-renault-megane-rs-trophy-r.jpg",
+      "_search_term": "Renault Megane RS Trophy-R",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2019 Renault Megane RS Trophy-R FOS19.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2019_Renault_Megane_RS_Trophy-R_FOS19.jpg",
+        "author": "MrWalkr",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "077-volkswagen-golf-r",
+      "brand": "Volkswagen",
+      "model": "Golf R",
+      "year": 2021,
+      "stats": {
+        "power_ps": 320,
+        "torque_nm": 420,
+        "displacement_cc": 1984,
+        "cylinders": 4,
+        "max_rpm": 6500,
+        "top_speed_kmh": 270,
+        "acceleration_0_100_s": 4.7,
+        "weight_kg": 1551
+      },
+      "image": "images/077-volkswagen-golf-r.jpg",
+      "_search_term": "Volkswagen Golf R Mk8",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "VOLKSWAGEN GOLF R-LINE (Mk8 CD1) China (3).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:VOLKSWAGEN_GOLF_R-LINE_(Mk8_CD1)_China_(3).jpg",
+        "author": "Dinkun Chen",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "078-volkswagen-golf-gti-clubsport",
+      "brand": "Volkswagen",
+      "model": "Golf GTI Clubsport",
+      "year": 2021,
+      "stats": {
+        "power_ps": 300,
+        "torque_nm": 400,
+        "displacement_cc": 1984,
+        "cylinders": 4,
+        "max_rpm": 6500,
+        "top_speed_kmh": 250,
+        "acceleration_0_100_s": 5.6,
+        "weight_kg": 1462
+      },
+      "image": "images/078-volkswagen-golf-gti-clubsport.jpg",
+      "_search_term": "Volkswagen Golf VIII GTI Clubsport",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Volkswagen Golf VIII GTI Clubsport (2024) (54722650189).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Volkswagen_Golf_VIII_GTI_Clubsport_(2024)_(54722650189).jpg",
+        "author": "Charles from Port Chester, New York",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "079-hyundai-i30-n",
+      "brand": "Hyundai",
+      "model": "i30 N",
+      "year": 2018,
+      "stats": {
+        "power_ps": 275,
+        "torque_nm": 378,
+        "displacement_cc": 1998,
+        "cylinders": 4,
+        "max_rpm": 6500,
+        "top_speed_kmh": 250,
+        "acceleration_0_100_s": 5.9,
+        "weight_kg": 1429
+      },
+      "image": "images/079-hyundai-i30-n.jpg",
+      "_search_term": "Hyundai i30 N",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2018 Hyundai i30 N Performance T-GDi 2.0 Front.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2018_Hyundai_i30_N_Performance_T-GDi_2.0_Front.jpg",
+        "author": "Vauxford",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "080-ford-focus-rs",
+      "brand": "Ford",
+      "model": "Focus RS",
+      "year": 2016,
+      "stats": {
+        "power_ps": 350,
+        "torque_nm": 470,
+        "displacement_cc": 2261,
+        "cylinders": 4,
+        "max_rpm": 6800,
+        "top_speed_kmh": 266,
+        "acceleration_0_100_s": 4.7,
+        "weight_kg": 1524
+      },
+      "image": "images/080-ford-focus-rs.jpg",
+      "_search_term": "Ford Focus RS 2016",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2016 Ford Focus RS 12.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2016_Ford_Focus_RS_12.jpg",
+        "author": "Calreyn88",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "081-ford-fiesta-st",
+      "brand": "Ford",
+      "model": "Fiesta ST",
+      "year": 2018,
+      "stats": {
+        "power_ps": 200,
+        "torque_nm": 320,
+        "displacement_cc": 1497,
+        "cylinders": 3,
+        "max_rpm": 6500,
+        "top_speed_kmh": 232,
+        "acceleration_0_100_s": 6.5,
+        "weight_kg": 1262
+      },
+      "image": "images/081-ford-fiesta-st.jpg",
+      "_search_term": "Ford Fiesta ST 2018",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2018 Ford Fiesta ST Front.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2018_Ford_Fiesta_ST_Front.jpg",
+        "author": "Vauxford",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "082-mini-john-cooper-works-gp",
+      "brand": "Mini",
+      "model": "John Cooper Works GP",
+      "year": 2020,
+      "stats": {
+        "power_ps": 306,
+        "torque_nm": 450,
+        "displacement_cc": 1998,
+        "cylinders": 4,
+        "max_rpm": 6500,
+        "top_speed_kmh": 265,
+        "acceleration_0_100_s": 5.2,
+        "weight_kg": 1255
+      },
+      "image": "images/082-mini-john-cooper-works-gp.jpg",
+      "_search_term": "Mini John Cooper Works GP",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Mini John Cooper Works GP Concept, IAA 2017, Frankfurt (1Y7A3218).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Mini_John_Cooper_Works_GP_Concept,_IAA_2017,_Frankfurt_(1Y7A3218).jpg",
+        "author": "Matti Blume",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "083-cupra-formentor-vz5",
+      "brand": "Cupra",
+      "model": "Formentor VZ5",
+      "year": 2021,
+      "stats": {
+        "power_ps": 390,
+        "torque_nm": 480,
+        "displacement_cc": 2480,
+        "cylinders": 5,
+        "max_rpm": 7000,
+        "top_speed_kmh": 250,
+        "acceleration_0_100_s": 4.2,
+        "weight_kg": 1745
+      },
+      "image": "images/083-cupra-formentor-vz5.jpg",
+      "_search_term": "Cupra Formentor VZ5",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Abt Cupra Formentor VZ5, Frankfurt (IMG 20230219 131201).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Abt_Cupra_Formentor_VZ5,_Frankfurt_(IMG_20230219_131201).jpg",
+        "author": "Matti Blume",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "084-skoda-octavia-rs",
+      "brand": "Skoda",
+      "model": "Octavia RS",
+      "year": 2020,
+      "stats": {
+        "power_ps": 245,
+        "torque_nm": 370,
+        "displacement_cc": 1984,
+        "cylinders": 4,
+        "max_rpm": 6200,
+        "top_speed_kmh": 250,
+        "acceleration_0_100_s": 6.7,
+        "weight_kg": 1440
+      },
+      "image": "images/084-skoda-octavia-rs.jpg",
+      "_search_term": "Škoda Octavia IV RS",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Škoda Octavia IV Combi RS Facelift IAA 2025 DSC 2341.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Octavia_IV_Combi_RS_Facelift_IAA_2025_DSC_2341.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "085-peugeot-208-gti",
+      "brand": "Peugeot",
+      "model": "208 GTi",
+      "year": 2016,
+      "stats": {
+        "power_ps": 208,
+        "torque_nm": 300,
+        "displacement_cc": 1598,
+        "cylinders": 4,
+        "max_rpm": 6000,
+        "top_speed_kmh": 230,
+        "acceleration_0_100_s": 6.5,
+        "weight_kg": 1160
+      },
+      "image": "images/085-peugeot-208-gti.jpg",
+      "_search_term": "Peugeot 208 GTi",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2017 Peugeot 208 GTi 1.6 Front.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2017_Peugeot_208_GTi_1.6_Front.jpg",
+        "author": "Vauxford",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "086-abarth-595-competizione",
+      "brand": "Abarth",
+      "model": "595 Competizione",
+      "year": 2016,
+      "stats": {
+        "power_ps": 180,
+        "torque_nm": 250,
+        "displacement_cc": 1368,
+        "cylinders": 4,
+        "max_rpm": 5500,
+        "top_speed_kmh": 225,
+        "acceleration_0_100_s": 6.7,
+        "weight_kg": 1035
+      },
+      "image": "images/086-abarth-595-competizione.jpg",
+      "_search_term": "Abarth 595 Competizione",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2020 Abarth 595 Competizione front.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2020_Abarth_595_Competizione_front.jpg",
+        "author": "LuvsMG481",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "087-suzuki-swift-sport",
+      "brand": "Suzuki",
+      "model": "Swift Sport",
+      "year": 2018,
+      "stats": {
+        "power_ps": 140,
+        "torque_nm": 235,
+        "displacement_cc": 1373,
+        "cylinders": 4,
+        "max_rpm": 5500,
+        "top_speed_kmh": 210,
+        "acceleration_0_100_s": 8.1,
+        "weight_kg": 970
+      },
+      "image": "images/087-suzuki-swift-sport.jpg",
+      "_search_term": "Suzuki Swift Sport 2018",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Suzuki Swift Sport Genf 2018.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Swift_Sport_Genf_2018.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "088-volkswagen-up-gti",
+      "brand": "Volkswagen",
+      "model": "up! GTI",
+      "year": 2018,
+      "stats": {
+        "power_ps": 115,
+        "torque_nm": 200,
+        "displacement_cc": 999,
+        "cylinders": 3,
+        "max_rpm": 6000,
+        "top_speed_kmh": 197,
+        "acceleration_0_100_s": 8.8,
+        "weight_kg": 1070
+      },
+      "image": "images/088-volkswagen-up-gti.jpg",
+      "_search_term": "Volkswagen up GTI",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Volkswagen Up GTI, IAA 2017, Frankfurt am Main (1Y7A2905).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Volkswagen_Up_GTI,_IAA_2017,_Frankfurt_am_Main_(1Y7A2905).jpg",
+        "author": "Matti Blume",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "089-kia-stinger-gt",
+      "brand": "Kia",
+      "model": "Stinger GT",
+      "year": 2017,
+      "stats": {
+        "power_ps": 370,
+        "torque_nm": 510,
+        "displacement_cc": 3342,
+        "cylinders": 6,
+        "max_rpm": 6000,
+        "top_speed_kmh": 270,
+        "acceleration_0_100_s": 4.9,
+        "weight_kg": 1780
+      },
+      "image": "images/089-kia-stinger-gt.jpg",
+      "_search_term": "Kia Stinger GT",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2023 Kia Stinger GT in HiChroma Red, front right.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2023_Kia_Stinger_GT_in_HiChroma_Red,_front_right.jpg",
+        "author": "Ethan Llamas",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "090-volvo-s60-polestar-engineered",
+      "brand": "Volvo",
+      "model": "S60 Polestar Engineered",
+      "year": 2019,
+      "stats": {
+        "power_ps": 405,
+        "torque_nm": 670,
+        "displacement_cc": 1969,
+        "cylinders": 4,
+        "max_rpm": 6000,
+        "top_speed_kmh": 250,
+        "acceleration_0_100_s": 4.4,
+        "weight_kg": 1930
+      },
+      "image": "images/090-volvo-s60-polestar-engineered.jpg",
+      "_search_term": "Volvo S60 Polestar Engineered",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Osaka Motor Show 2019 (224) - Volvo S60 T8 Polestar Engineered (5LA-ZB420P).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Osaka_Motor_Show_2019_(224)_-_Volvo_S60_T8_Polestar_Engineered_(5LA-ZB420P).jpg",
+        "author": "Tokumeigakarinoaoshima",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "091-mazda-3-skyactiv-x",
+      "brand": "Mazda",
+      "model": "3 Skyactiv-X",
+      "year": 2019,
+      "stats": {
+        "power_ps": 186,
+        "torque_nm": 240,
+        "displacement_cc": 1998,
+        "cylinders": 4,
+        "max_rpm": 6000,
+        "top_speed_kmh": 216,
+        "acceleration_0_100_s": 8.1,
+        "weight_kg": 1400
+      },
+      "image": "images/091-mazda-3-skyactiv-x.jpg",
+      "_search_term": "Mazda 3 BP",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "MAZDA 3 FASTBACK BP 201905 002.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:MAZDA_3_FASTBACK_BP_201905_002.jpg",
+        "author": "CEFICEFI",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "092-honda-civic-e-hev",
+      "brand": "Honda",
+      "model": "Civic e:HEV",
+      "year": 2022,
+      "stats": {
+        "power_ps": 184,
+        "torque_nm": 315,
+        "displacement_cc": 1993,
+        "cylinders": 4,
+        "max_rpm": 6000,
+        "top_speed_kmh": 180,
+        "acceleration_0_100_s": 7.9,
+        "weight_kg": 1450
+      },
+      "image": "images/092-honda-civic-e-hev.jpg",
+      "_search_term": "Honda Civic 2022",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Honda Civic Hybrid (2022, Europe) IAA 2023 1X7A0545 (2).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Honda_Civic_Hybrid_(2022,_Europe)_IAA_2023_1X7A0545_(2).jpg",
+        "author": "Alexander-93",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "093-bmw-320d",
+      "brand": "BMW",
+      "model": "320d",
+      "year": 2019,
+      "stats": {
+        "power_ps": 190,
+        "torque_nm": 400,
+        "displacement_cc": 1995,
+        "cylinders": 4,
+        "max_rpm": 4600,
+        "top_speed_kmh": 240,
+        "acceleration_0_100_s": 6.8,
+        "weight_kg": 1545
+      },
+      "image": "images/093-bmw-320d.jpg",
+      "_search_term": "BMW 320d G20",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "BMW G20 320d Black Sapphire Metallic (8).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:BMW_G20_320d_Black_Sapphire_Metallic_(8).jpg",
+        "author": "Damian B Oh",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "094-mercedes-benz-c-220-d",
+      "brand": "Mercedes-Benz",
+      "model": "C 220 d",
+      "year": 2018,
+      "stats": {
+        "power_ps": 194,
+        "torque_nm": 400,
+        "displacement_cc": 1950,
+        "cylinders": 4,
+        "max_rpm": 4600,
+        "top_speed_kmh": 245,
+        "acceleration_0_100_s": 7.0,
+        "weight_kg": 1575
+      },
+      "image": "images/094-mercedes-benz-c-220-d.jpg",
+      "_search_term": "Mercedes-Benz C 220 d W205",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Mercedes-Benz C 220 d (W205, 2016) (52920488052).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_C_220_d_(W205,_2016)_(52920488052).jpg",
+        "author": "Charles from Port Chester, New York",
+        "license": "CC BY 2.0"
+      }
+    },
+    {
+      "id": "095-volkswagen-passat-2-0-tdi",
+      "brand": "Volkswagen",
+      "model": "Passat 2.0 TDI",
+      "year": 2019,
+      "stats": {
+        "power_ps": 190,
+        "torque_nm": 400,
+        "displacement_cc": 1968,
+        "cylinders": 4,
+        "max_rpm": 4500,
+        "top_speed_kmh": 238,
+        "acceleration_0_100_s": 7.7,
+        "weight_kg": 1523
+      },
+      "image": "images/095-volkswagen-passat-2-0-tdi.jpg",
+      "_search_term": "Volkswagen Passat B8",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "DSC06183 Unmarked Volkswagen Passat B8, Bundespolizei Österreich, Front, 2023-10.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:DSC06183_Unmarked_Volkswagen_Passat_B8,_Bundespolizei_%C3%96sterreich,_Front,_2023-10.jpg",
+        "author": "Aciarium",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "id": "096-skoda-superb-2-0-tsi",
+      "brand": "Skoda",
+      "model": "Superb 2.0 TSI",
+      "year": 2019,
+      "stats": {
+        "power_ps": 272,
+        "torque_nm": 350,
+        "displacement_cc": 1984,
+        "cylinders": 4,
+        "max_rpm": 6000,
+        "top_speed_kmh": 250,
+        "acceleration_0_100_s": 5.8,
+        "weight_kg": 1615
+      },
+      "image": "images/096-skoda-superb-2-0-tsi.jpg",
+      "_search_term": "Skoda Superb III",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "Skoda Superb III Combi Scout at IAA 2019 IMG 0275.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Skoda_Superb_III_Combi_Scout_at_IAA_2019_IMG_0275.jpg",
+        "author": "Alexander Migl",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "097-toyota-corolla-hybrid",
+      "brand": "Toyota",
+      "model": "Corolla Hybrid",
+      "year": 2019,
+      "stats": {
+        "power_ps": 122,
+        "torque_nm": 142,
+        "displacement_cc": 1798,
+        "cylinders": 4,
+        "max_rpm": 5200,
+        "top_speed_kmh": 180,
+        "acceleration_0_100_s": 10.9,
+        "weight_kg": 1370
+      },
+      "image": "images/097-toyota-corolla-hybrid.jpg",
+      "_search_term": "Toyota Corolla E210",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2023 Toyota Corolla Touring Sports Hybrid (E210) IMG 7679.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2023_Toyota_Corolla_Touring_Sports_Hybrid_(E210)_IMG_7679.jpg",
+        "author": "Alexander-93",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "098-dacia-sandero-tce-90",
+      "brand": "Dacia",
+      "model": "Sandero TCe 90",
+      "year": 2021,
+      "stats": {
+        "power_ps": 91,
+        "torque_nm": 160,
+        "displacement_cc": 999,
+        "cylinders": 3,
+        "max_rpm": 5000,
+        "top_speed_kmh": 178,
+        "acceleration_0_100_s": 12.2,
+        "weight_kg": 1165
+      },
+      "image": "images/098-dacia-sandero-tce-90.jpg",
+      "_search_term": "Dacia Sandero 2021",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2021 Dacia Sandero Stepway Prestige TCE 1.0 Front.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2021_Dacia_Sandero_Stepway_Prestige_TCE_1.0_Front.jpg",
+        "author": "Vauxford",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "099-fiat-500-1-2",
+      "brand": "Fiat",
+      "model": "500 1.2",
+      "year": 2016,
+      "stats": {
+        "power_ps": 69,
+        "torque_nm": 102,
+        "displacement_cc": 1242,
+        "cylinders": 4,
+        "max_rpm": 5500,
+        "top_speed_kmh": 160,
+        "acceleration_0_100_s": 12.9,
+        "weight_kg": 940
+      },
+      "image": "images/099-fiat-500-1-2.jpg",
+      "_search_term": "Fiat 500 2015",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2015 FIAT 500 Sport, front right, 09-03-2022.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2015_FIAT_500_Sport,_front_right,_09-03-2022.jpg",
+        "author": "MercurySable99",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "100-ford-puma-st",
+      "brand": "Ford",
+      "model": "Puma ST",
+      "year": 2020,
+      "stats": {
+        "power_ps": 200,
+        "torque_nm": 320,
+        "displacement_cc": 1497,
+        "cylinders": 3,
+        "max_rpm": 6500,
+        "top_speed_kmh": 220,
+        "acceleration_0_100_s": 6.7,
+        "weight_kg": 1358
+      },
+      "image": "images/100-ford-puma-st.jpg",
+      "_search_term": "Ford Puma ST",
+      "image_credit": {
+        "source": "Wikimedia Commons",
+        "file": "2024 Ford Puma ST-Line EcoBoost - 999cc 1.0 (125PS) Petrol - Cactus Grey - 08-2024, Front.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2024_Ford_Puma_ST-Line_EcoBoost_-_999cc_1.0_(125PS)_Petrol_-_Cactus_Grey_-_08-2024,_Front.jpg",
+        "author": "Harvey Bold",
+        "license": "CC0"
+      }
+    }
+  ]
+}
