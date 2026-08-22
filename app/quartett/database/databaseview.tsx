@@ -1,9 +1,9 @@
 "use client"
-import { Button } from "@/components/button"
 import { useLiveQuery } from "dexie-react-hooks"
 import carDatabase from "../database/cars.json"
 import { db } from "./db"
 import React from "react"
+import { Button } from "@/components/ui/button"
 
 export function DatabaseView() {
   const cars = useLiveQuery(async () => db.cars.toArray())
@@ -18,7 +18,7 @@ export function DatabaseView() {
   return (
     <div>
       <div className="flex gap-2 mb-3">
-        <Button variant="primary" size="sm" onClick={() => alert("TODO")}>
+        <Button variant="default" size="sm" onClick={() => alert("TODO")}>
           + Add new Card
         </Button>
         <Button variant="secondary" size="sm" onClick={() => db.cars.clear()}>

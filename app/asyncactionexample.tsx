@@ -1,6 +1,6 @@
 "use client"
 import { create } from "zustand"
-import { Button } from "@/components/button"
+import { Button } from "./components/ui/button"
 
 interface Store {
   data: number | null
@@ -31,9 +31,7 @@ export const AsyncActionExample = () => {
   const doubleDown = useStore((state) => (state.data ?? 0) * 2)
   return (
     <div>
-      <Button variant="secondary" size="lg" onClick={store.fetchData}>
-        Update with async action
-      </Button>
+      <Button onClick={store.fetchData}>Update with async action</Button>
       <div className="">
         <code>{JSON.stringify(store, undefined, 2)}</code>
       </div>

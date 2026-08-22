@@ -1,6 +1,6 @@
 "use client"
 
-import { Tooltip, TooltipContent, TooltipPortal, TooltipProvider, TooltipTrigger } from "@/components/tooltip"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { useLiveQuery } from "dexie-react-hooks"
 import Link from "next/link"
 import { CardTitle, CarStatsGrid } from "../components/quartett-card"
@@ -21,12 +21,10 @@ export function QuartettGallery() {
               <TooltipTrigger>
                 <img src={`${basePath}/cars/${card.image}`} className="w-fit rounded-2xl" />
               </TooltipTrigger>
-              <TooltipPortal>
-                <TooltipContent>
-                  <CardTitle car={card} />
-                  <CarStatsGrid stats={card.stats} />
-                </TooltipContent>
-              </TooltipPortal>
+              <TooltipContent className="flex flex-col bg-white text-black">
+                <CardTitle car={card} />
+                <CarStatsGrid stats={card.stats} />
+              </TooltipContent>
             </Tooltip>
           </TooltipProvider>
         </Link>

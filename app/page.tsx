@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { AsyncActionExample } from "./asyncactionexample"
 import { CounterExampleZustand } from "./counterexample"
-import { Button } from "@/components/button"
+import { Button } from "./components/ui/button"
 
 export default function Home() {
   return (
@@ -13,24 +13,24 @@ export default function Home() {
           </h1>
           <CounterExampleZustand />
           <AsyncActionExample />
-          <UiKit />
+          <Buttons />
         </div>
       </main>
     </div>
   )
 }
 
-function UiKit() {
-  const variants = ["primary", "secondary"] as const
-  const sizes = ["sm", "md", "lg", "xl"] as const
+function Buttons() {
+  const variants = ["default", "outline", "secondary", "ghost", "destructive", "link"] as const
+  const sizes = ["default", "xs", "sm", "lg", "icon"] as const
   return (
     <>
-      <h1 className="text-xl">UiKit - Variants & Sizes</h1>
-      <div className="grid grid-cols-2 gap-2">
+      <h1 className="text-xl">Buttons - Variants & Sizes</h1>
+      <div className="grid grid-cols-3 gap-3">
         {variants.map((variant) =>
           sizes.map((size) => (
             // eslint-disable-next-line
-            <Button key={variant + "-" + size} variant={variant} size={size}>
+            <Button key={variant + "-" + size} variant={variant} size={size} className="w-full">
               button {variant} {size}
             </Button>
           ))

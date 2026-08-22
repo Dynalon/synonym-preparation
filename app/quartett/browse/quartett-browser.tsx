@@ -1,5 +1,5 @@
 "use client"
-import { Button } from "@/components/button"
+import { Button } from "@/components/ui/button"
 import { useLiveQuery } from "dexie-react-hooks"
 import { useState } from "react"
 import { QuartettCard } from "../components/quartett-card"

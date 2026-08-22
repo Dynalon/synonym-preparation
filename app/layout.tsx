@@ -1,9 +1,14 @@
 "use client"
-import { Geist, Geist_Mono } from "next/font/google"
-import "./globals.css"
+import { Geist, Geist_Mono, Inter, Oxanium, Outfit, DM_Sans, Noto_Serif } from "next/font/google"
 import Link from "next/link"
-import { cn } from "./util"
 import { usePathname } from "next/navigation"
+import { TooltipProvider } from "./components/ui/tooltip"
+import "./globals.css"
+import { cn } from "./util"
+
+const notoSerifHeading = Noto_Serif({subsets:['latin'],variable:'--font-heading'})
+
+const dmSans = DM_Sans({subsets:['latin'],variable:'--font-sans'})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,10 +54,21 @@ function Navigation() {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={cn(
+        "h-full",
+        "antialiased",
+        geistSans.variable,
+        geistMono.variable,
+        "font-sans",
+        dmSans.variable,
+        notoSerifHeading.variable
+      )}
+    >
       <body className="min-h-full flex flex-col">
         <Navigation />
-        {children}
+        <TooltipProvider>{children}</TooltipProvider>
       </body>
     </html>
   )
