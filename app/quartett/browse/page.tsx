@@ -1,8 +1,17 @@
 "use client"
 import { useSearchParams } from "next/navigation"
 import { QuartettBrowser } from "./quartett-browser"
+import { Suspense } from "react"
 
-export default function QuartettBrowserPage() {
+export default function QuartettBrowserPageWrapper() {
+  return (
+    <Suspense fallback={"This only works in CSR"}>
+      <QuartettBrowserPage />
+    </Suspense>
+  )
+}
+
+function QuartettBrowserPage() {
   const params = useSearchParams()
   const id = params.get("id") ?? undefined
 
