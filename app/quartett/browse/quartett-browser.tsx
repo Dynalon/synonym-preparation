@@ -2,7 +2,7 @@
 import { useState } from "react"
 import { QuartettCard } from "../components/quartett-card"
 import carDatabase from "../data/cars.json"
-import { Button } from "../../components/button"
+import { Button } from "@/components/button"
 
 const NUM_CARDS = carDatabase.cards.length
 

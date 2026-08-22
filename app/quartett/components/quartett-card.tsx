@@ -1,5 +1,5 @@
 import { Car, CarStats } from "../types"
-import { cn } from "../../util"
+import { cn } from "@/util"
 
 export function CardTitle({ car: { brand, model, year } }: { car: Car }) {
   return (

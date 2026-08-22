@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { AsyncActionExample } from "./asyncactionexample"
 import { CounterExampleZustand } from "./counterexample"
-import { Button } from "./components/button"
+import { Button } from "@/components/button"
 
 export default function Home() {
   return (

@@ -1,6 +1,6 @@
 import Link from "next/link"
 import carDatabase from "../data/cars.json"
-import { Tooltip, TooltipContent, TooltipPortal, TooltipProvider, TooltipTrigger } from "@/app/components/tooltip"
+import { Tooltip, TooltipContent, TooltipPortal, TooltipProvider, TooltipTrigger } from "@/components/tooltip"
 import { CardTitle, CarStatsGrid } from "../components/quartett-card"
 
 export function QuartettGallery() {

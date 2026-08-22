@@ -1,7 +1,7 @@
 "use client"
 
 import { create } from "zustand"
-import { Button } from "./components/button"
+import { Button } from "@/components/button"
 
 interface CounterStore {
   count: number
