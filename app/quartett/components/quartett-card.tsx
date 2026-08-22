@@ -1,5 +1,5 @@
 import { Car, CarStats } from "../types"
-import { cn } from "@/util"
+import { basePath, cn } from "@/util"
 
 export function CardTitle({ car: { brand, model, year } }: { car: Car }) {
   return (
@@ -16,7 +16,7 @@ export function QuartettCard({ car }: { car: Car }) {
   return (
     <div className="w-[400px] p-3 rounded-2xl bg-white shadow-2xl flex flex-col gap-2">
       <CardTitle car={car} />
-      <img src={`/cars/${image}`} className="w-full rounded-2xl" />
+      <img src={`${basePath}/cars/${image}`} className="w-full rounded-2xl" />
       <hr className="border-gray-200 my-3 w-[80%] mx-auto" />
       <CarStatsGrid stats={car.stats} />
     </div>

@@ -5,6 +5,7 @@ import { useLiveQuery } from "dexie-react-hooks"
 import Link from "next/link"
 import { CardTitle, CarStatsGrid } from "../components/quartett-card"
 import { db } from "../database/db"
+import { basePath } from "@/util"
 
 export function QuartettGallery() {
   const cards = useLiveQuery(() => db.cars.toArray())
@@ -18,7 +19,7 @@ export function QuartettGallery() {
           <TooltipProvider delayDuration={400}>
             <Tooltip>
               <TooltipTrigger>
-                <img src={`/cars/${card.image}`} className="w-fit rounded-2xl" />
+                <img src={`${basePath}/cars/${card.image}`} className="w-fit rounded-2xl" />
               </TooltipTrigger>
               <TooltipPortal>
                 <TooltipContent>
