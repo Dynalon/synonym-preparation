@@ -1,16 +1,24 @@
 "use client"
+import { Button } from "@/components/button"
+import { useLiveQuery } from "dexie-react-hooks"
 import { useState } from "react"
 import { QuartettCard } from "../components/quartett-card"
-import carDatabase from "../data/cars.json"
-import { Button } from "@/components/button"
-
-const NUM_CARDS = carDatabase.cards.length
+import { db } from "../database/db"
 
 export function QuartettBrowser({ id }: { id?: string }) {
-  const [selectedCard, setSelectedCard] = useState(id ? carDatabase.cards.findIndex((card) => card.id === id) + 1 : 1)
-  const car = carDatabase.cards[selectedCard - 1]
+  const cars = useLiveQuery(() => db.cars.toArray())
+  const [selectedCard, setSelectedCard] = useState(1)
+
+  const idIndex = id && cars ? cars.findIndex((c) => c.id === id) : -1
+  const effectiveCard = idIndex !== -1 ? idIndex + 1 : selectedCard
+
+  const car = cars ? cars[effectiveCard - 1] : undefined
+  const NUM_CARDS = cars?.length ?? 0
   const inc = () => setSelectedCard((s) => Math.min(s + 1, NUM_CARDS))
   const dec = () => setSelectedCard((s) => Math.max(s - 1, 1))
+
+  if (!cars) return "Loading"
+  if (!car) return "Card not found"
 
   return (
     <div className="w-full">

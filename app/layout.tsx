@@ -21,20 +21,27 @@ function Navigation() {
     <div className="w-full flex justify-center items-center p-2 gap-x-4 fixed top bg-white">
       <Link href="/" className={cn("text-amber-600 ", { "underline font-bold": !pathname || pathname === "/" })}>
         Home
-      </Link>{" "}
-      | 
+      </Link>
+      {" | "}
       <Link
         href="/quartett/browse"
         className={cn("text-amber-600 ", { "underline font-bold": pathname.includes("browse") })}
       >
         Card Browser
-      </Link>{" "}
-      |
+      </Link>
+      {" | "}
       <Link
         href="/quartett/gallery"
         className={cn("text-amber-600 ", { "underline font-bold": pathname.includes("gallery") })}
       >
         Gallery
+      </Link>
+      {" | "}
+      <Link
+        href="/quartett/database"
+        className={cn("text-amber-600 ", { "underline font-bold": pathname.includes("database") })}
+      >
+        Database
       </Link>
     </div>
   )
