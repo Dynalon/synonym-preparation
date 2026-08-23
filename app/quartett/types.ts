@@ -9,11 +9,16 @@ export type CarStats = {
   weight_kg: number
 }
 
-export type Car = {
+export type CarDto = {
   id: string
   brand: string
   model: string
   year: number
   stats: CarStats
   image: string
+}
+
+// add a primary number id
+export type CarDao = CarDto & {
+  idInt: number
 }

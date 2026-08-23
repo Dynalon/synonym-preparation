@@ -1,13 +1,13 @@
+import { CarDao } from "@/quartett/types"
 import { Dexie, EntityTable } from "dexie"
-import { Car } from "@/quartett/types"
 import { getCars } from "../restApi"
 
 export const db = new Dexie("Quartett") as Dexie & {
-  cars: EntityTable<Car, "id">
+  cars: EntityTable<CarDao, "idInt">
 }
 
 db.version(1).stores({
-  cars: "id",
+  cars: "++idInt, id",
 })
 
 // intialize on create from our REST API

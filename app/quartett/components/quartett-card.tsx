@@ -1,17 +1,17 @@
-import { Car, CarStats } from "../types"
+import { CarDto, CarStats } from "../types"
 import { basePath, cn } from "@/util"
 
-export function CardTitle({ car: { brand, model, year } }: { car: Car }) {
+export function CardTitle({ car: { brand, model, year } }: { car: CarDto }) {
   return (
-    <div className="flex justify-between align-bottom ">
-      <span className="text-2xl truncate min-w-0">
+    <div className="flex justify-between items-baseline">
+      <span className="text-2xl truncate min-w-0 pr-1">
         {brand} <span className="text-lg italic text-amber-800">{model}</span>
       </span>
-      <span className="text-gray-500 text-sm shrink-0">{year}</span>
+      <span className="text-gray-500 text-sm shrink-0 pl-1">{year}</span>
     </div>
   )
 }
-export function QuartettCard({ car }: { car: Car }) {
+export function QuartettCard({ car }: { car: CarDto }) {
   const { image } = car
   return (
     <div className="w-[400px] p-3 rounded-2xl bg-white shadow-2xl flex flex-col gap-2">
