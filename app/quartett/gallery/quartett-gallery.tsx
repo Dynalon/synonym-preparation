@@ -6,11 +6,14 @@ import { useLiveQuery } from "dexie-react-hooks"
 import Link from "next/link"
 import { CardTitle, CarStatsGrid } from "../components/quartett-card"
 import { db } from "../database/db"
-import { usePagination } from "./usePagination"
+import { useGalleryPagination } from "./pagination"
 
 export function QuartettGallery() {
   const num_cars = useLiveQuery(async () => db.cars.count())
-  const { paginationElement, currentPage, pageSize } = usePagination(num_cars ? num_cars : 0, num_cars !== undefined)
+  const { paginationElement, currentPage, pageSize } = useGalleryPagination(
+    num_cars ? num_cars : 0,
+    num_cars !== undefined
+  )
 
   const cars = useLiveQuery(
     async () =>

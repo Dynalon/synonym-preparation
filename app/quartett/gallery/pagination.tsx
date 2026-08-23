@@ -16,7 +16,7 @@ function getVisiblePages(page: number, num_pages: number, max_visible: number): 
   return Array.from({ length: Math.min(max_visible, num_pages) }, (_, i) => start + i)
 }
 
-export const usePagination = (num_items: number, enabled: boolean = true) => {
+export const useGalleryPagination = (num_items: number, enabled: boolean = true) => {
   const { currentPage, maxPagesVisible, pageSize, setCurrentPage, nextPage, prevPage } = usePaginationStore()
   const num_pages = Math.ceil(num_items / pageSize)
 
