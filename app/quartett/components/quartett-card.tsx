@@ -11,14 +11,19 @@ export function CardTitle({ car: { brand, model, year } }: { car: CarDto }) {
     </div>
   )
 }
-export function QuartettCard({ car }: { car: CarDto }) {
-  const { image } = car
+export function QuartettCard({ car, loading }: { car?: CarDto; loading: boolean }) {
   return (
-    <div className="w-[400px] p-3 rounded-2xl bg-white shadow-2xl flex flex-col gap-2">
-      <CardTitle car={car} />
-      <img src={`${basePath}/cars/${image}`} className="w-full rounded-2xl" />
-      <hr className="border-gray-200 my-3 w-[80%] mx-auto" />
-      <CarStatsGrid stats={car.stats} />
+    <div className="relative w-[400px] p-3 rounded-2xl bg-white shadow-2xl flex flex-col gap-2 min-h-[500px]">
+      {loading || !car ? (
+        <div className="w-full flex-1 rounded-2xl bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-[length:200%_100%] animate-[shimmer_1.5s_infinite]" />
+      ) : (
+        <>
+          <CardTitle car={car} />
+          <img src={`${basePath}/cars/${car.image}`} className="w-full rounded-2xl" />
+          <hr className="border-gray-200 my-3 w-[80%] mx-auto" />
+          <CarStatsGrid stats={car.stats} />
+        </>
+      )}
     </div>
   )
 }
