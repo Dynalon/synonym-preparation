@@ -10,42 +10,39 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { basePath } from "@/util"
+import { basePath, cn } from "@/util"
 import { useLiveQuery } from "dexie-react-hooks"
 import Link from "next/link"
 import { CardTitle, CarStatsGrid } from "../components/quartett-card"
 import { db } from "../database/db"
 import { useGalleryStore } from "./store"
 
-const PAGE_SIZE = 6
-const MAX_PAGES_VISIBLE = 5
-
 // page starts at 0
-function getVisiblePages(page: number, num_pages: number, maxVisible: number = MAX_PAGES_VISIBLE): number[] {
-  const half = Math.floor(maxVisible / 2)
-  const start = Math.min(Math.max(page - half, 0), Math.max(num_pages - maxVisible, 0))
-  return Array.from({ length: Math.min(maxVisible, num_pages) }, (_, i) => start + i)
+function getVisiblePages(page: number, num_pages: number, max_visible: number): number[] {
+  const half = Math.floor(max_visible / 2)
+  const start = Math.min(Math.max(page - half, 0), Math.max(num_pages - max_visible, 0))
+  return Array.from({ length: Math.min(max_visible, num_pages) }, (_, i) => start + i)
 }
 
 export function QuartettGallery() {
-  const { currentPage, setCurrentPage, nextPage, prevPage } = useGalleryStore()
+  const { currentPage, maxPagesVisible, pageSize, setCurrentPage, nextPage, prevPage } = useGalleryStore()
   const num_cars = useLiveQuery(async () => db.cars.count())
 
   const cars = useLiveQuery(
     async () =>
       num_cars
         ? db.cars
-            .offset(PAGE_SIZE * currentPage)
-            .limit(PAGE_SIZE)
+            .offset(pageSize * currentPage)
+            .limit(pageSize)
             .toArray()
         : undefined,
-    [currentPage, num_cars]
+    [currentPage, num_cars, pageSize]
   )
 
   if (num_cars === undefined || !cars) return "Loading"
 
-  const num_pages = Math.ceil(num_cars / PAGE_SIZE)
-  const visiblePages = getVisiblePages(currentPage, num_pages)
+  const num_pages = Math.ceil(num_cars / pageSize)
+  const visiblePages = getVisiblePages(currentPage, num_pages, maxPagesVisible)
   const showLeftEllipsis = visiblePages[0] > 0
   const showRightEllipsis = visiblePages[visiblePages.length - 1] < num_pages - 1
 
@@ -92,7 +89,7 @@ export function QuartettGallery() {
           </PaginationContent>
         </Pagination>
       </div>
-      <div className="grid grid-cols-3 gap-3">
+      <div className={cn("grid gap-3 grid-cols-3")}>
         {cars.map((card) => (
           <Link key={card.id} href={`/quartett/browse?id=${card.id}`}>
             <TooltipProvider delayDuration={400}>
