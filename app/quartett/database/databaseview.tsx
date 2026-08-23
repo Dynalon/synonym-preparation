@@ -1,19 +1,15 @@
 "use client"
-import { useLiveQuery } from "dexie-react-hooks"
-import { db } from "./db"
-import React from "react"
 import { Button } from "@/components/ui/button"
-import { getCars } from "../restApi"
+import { useLiveQuery } from "dexie-react-hooks"
+import React from "react"
+import { db, populateDb } from "./db"
 
 export function DatabaseView() {
-  const cars = useLiveQuery(async () => await getCars())
+  const cars = useLiveQuery(async () => db.cars.toArray())
 
-  const importData = async () => {
-    const cars = await getCars()
-    for (const car of cars) {
-      const alreadyImported = (await db.cars.where("id").equals(car.id).count()) > 0
-      if (!alreadyImported) db.cars.add(car)
-    }
+  const resetDatabase = async () => {
+    db.cars.clear()
+    populateDb()
   }
 
   return (
@@ -22,11 +18,8 @@ export function DatabaseView() {
         <Button variant="default" size="sm" onClick={() => alert("TODO")}>
           + Add new Card
         </Button>
-        <Button variant="secondary" size="sm" onClick={() => db.cars.clear()}>
-          Clear Database
-        </Button>
-        <Button variant="secondary" size="sm" onClick={importData}>
-          Import JSON Data to Dexie
+        <Button variant="secondary" size="sm" onClick={resetDatabase}>
+          Reset Database
         </Button>
       </div>
       <div className="grid grid-cols-[auto_auto_1fr] gap-y-3 gap-x-2 text-xs font-mono text-wrap align-top">
@@ -34,7 +27,11 @@ export function DatabaseView() {
           return (
             <React.Fragment key={car.id}>
               <div className="w-fit">
-                <Button variant="destructive" size="sm" onClick={() => db.cars.delete(car.id)}>
+                <Button
+                  variant="destructive"
+                  size="sm"
+                  onClick={async () => await db.cars.where("id").equals(car.id).delete()}
+                >
                   ❌ Delete
                 </Button>
               </div>

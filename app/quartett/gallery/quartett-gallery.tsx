@@ -13,7 +13,7 @@ export function QuartettGallery() {
   if (!cards) return "Loading"
 
   return (
-    <div className="grid grid-cols-4 gap-2">
+    <div className="grid grid-cols-3 gap-2">
       {cards.map((card) => (
         <Link key={card.id} className="cursor-pointer" href={`/quartett/browse?id=${card.id}`}>
           <TooltipProvider delayDuration={400}>
