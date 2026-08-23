@@ -21,34 +21,28 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 })
 
-function Navigation() {
+function NavLink({ label, href }: { label: React.ReactNode; href: string }) {
   const pathname = usePathname()
   return (
+    <Link
+      href={href}
+      className={cn("text-primary ", { "underline font-bold": href === pathname || href + "/" === pathname })}
+    >
+      {label}
+    </Link>
+  )
+}
+
+function Navigation() {
+  return (
     <div className="w-full flex justify-center items-center p-2 gap-x-4 fixed top bg-white">
-      <Link href="/" className={cn("text-amber-600 ", { "underline font-bold": !pathname || pathname === "/" })}>
-        Home
-      </Link>
+      <NavLink label={"Card Browser"} href="/quartett/browse" />
       {" | "}
-      <Link
-        href="/quartett/browse"
-        className={cn("text-amber-600 ", { "underline font-bold": pathname.includes("browse") })}
-      >
-        Card Browser
-      </Link>
+      <NavLink label={"Gallery"} href="/quartett/gallery" />
       {" | "}
-      <Link
-        href="/quartett/gallery"
-        className={cn("text-amber-600 ", { "underline font-bold": pathname.includes("gallery") })}
-      >
-        Gallery
-      </Link>
+      <NavLink label={"Database"} href="/quartett/database" />
       {" | "}
-      <Link
-        href="/quartett/database"
-        className={cn("text-amber-600 ", { "underline font-bold": pathname.includes("database") })}
-      >
-        Database
-      </Link>
+      <NavLink label={"Playground"} href="/" />
     </div>
   )
 }
