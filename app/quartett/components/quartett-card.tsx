@@ -42,7 +42,7 @@ export function CarStatsGrid({ className, stats, ...props }: React.ComponentProp
       <CarStatKeyValue label={"Horsepowers"} value={stats.power_ps.toLocaleString()} />
       <CarStatKeyValue label={"V_max"} value={<>{stats.top_speed_kmh} km/h</>} />
       <CarStatKeyValue label={"Torque max"} value={<>{stats.torque_nm} Nm</>} />
-      <CarStatKeyValue label={"Weight"} value={<>{stats.weight_kg.toLocaleString()} km/h</>} />
+      <CarStatKeyValue label={"Weight"} value={<>{stats.weight_kg.toLocaleString()} kg</>} />
     </div>
   )
 }

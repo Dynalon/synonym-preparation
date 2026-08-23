@@ -1,23 +1,21 @@
 "use client"
 
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import { basePath } from "@/util"
 import { useLiveQuery } from "dexie-react-hooks"
 import Link from "next/link"
 import { CardTitle, CarStatsGrid } from "../components/quartett-card"
 import { db } from "../database/db"
-import { basePath } from "@/util"
-import { usePathname, useSearchParams } from "next/navigation"
-import { useRouter } from "next/navigation"
-import { useCallback, useEffect } from "react"
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationPrevious,
-  PaginationLink,
-  PaginationEllipsis,
-  PaginationNext,
-} from "@/components/ui/pagination"
+import { useGalleryStore } from "./store"
 
 const PAGE_SIZE = 6
 const MAX_PAGES_VISIBLE = 5
@@ -30,45 +28,24 @@ function getVisiblePages(page: number, num_pages: number, maxVisible: number = M
 }
 
 export function QuartettGallery() {
-  const params = useSearchParams()
-  const router = useRouter()
-  const pathname = usePathname()
-
-  const setPage = useCallback(
-    (newPage: number, replace: boolean = false) => {
-      const existingParams = new URLSearchParams(params.toString())
-      existingParams.set("page", newPage.toString())
-      const url = `${pathname}?${existingParams.toString()}`
-      if (replace) router.replace(url)
-      else router.push(url)
-    },
-    [router, params, pathname]
-  )
-
-  useEffect(() => {
-    if (!params.has("page")) {
-      setPage(0, true)
-    }
-  }, [params, setPage])
-
-  const page = Number.parseInt(params.get("page") ?? "0")
+  const { currentPage, setCurrentPage, nextPage, prevPage } = useGalleryStore()
   const num_cars = useLiveQuery(async () => db.cars.count())
 
   const cars = useLiveQuery(
     async () =>
       num_cars
         ? db.cars
-            .offset(PAGE_SIZE * page)
+            .offset(PAGE_SIZE * currentPage)
             .limit(PAGE_SIZE)
             .toArray()
         : undefined,
-    [page, num_cars]
+    [currentPage, num_cars]
   )
 
-  if (!params.has("page") || num_cars === undefined || !cars) return "Loading"
+  if (num_cars === undefined || !cars) return "Loading"
 
   const num_pages = Math.ceil(num_cars / PAGE_SIZE)
-  const visiblePages = getVisiblePages(page, num_pages)
+  const visiblePages = getVisiblePages(currentPage, num_pages)
   const showLeftEllipsis = visiblePages[0] > 0
   const showRightEllipsis = visiblePages[visiblePages.length - 1] < num_pages - 1
 
@@ -79,9 +56,9 @@ export function QuartettGallery() {
           <PaginationContent className="w-full justify-between">
             <PaginationItem>
               <PaginationPrevious
-                aria-disabled={page === 0}
-                className={page === 0 ? "pointer-events-none opacity-50" : ""}
-                onClick={() => page > 0 && setPage(page - 1)}
+                aria-disabled={currentPage === 0}
+                className={currentPage === 0 ? "pointer-events-none opacity-50" : ""}
+                onClick={() => currentPage > 0 && prevPage()}
               />
             </PaginationItem>
 
@@ -93,7 +70,7 @@ export function QuartettGallery() {
               )}
               {visiblePages.map((p) => (
                 <PaginationItem key={p}>
-                  <PaginationLink isActive={p === page} onClick={() => setPage(p)}>
+                  <PaginationLink isActive={p === currentPage} onClick={() => setCurrentPage(p)}>
                     {p + 1}
                   </PaginationLink>
                 </PaginationItem>
@@ -107,9 +84,9 @@ export function QuartettGallery() {
 
             <PaginationItem>
               <PaginationNext
-                onClick={() => page < num_pages - 1 && setPage(page + 1)}
-                aria-disabled={page === num_pages - 1}
-                className={page === num_pages - 1 ? "pointer-events-none opacity-50" : ""}
+                onClick={() => currentPage < num_pages - 1 && nextPage()}
+                aria-disabled={currentPage === num_pages - 1}
+                className={currentPage === num_pages - 1 ? "pointer-events-none opacity-50" : ""}
               />
             </PaginationItem>
           </PaginationContent>
