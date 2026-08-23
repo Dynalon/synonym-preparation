@@ -14,7 +14,7 @@ export function QuartettBrowser({ id }: { id?: string }) {
 
   const carIndexFromId = id && cars ? cars.findIndex((c) => c.id === id) : undefined
   const index = selectedIndex ?? carIndexFromId ?? 0
-  const selectedCar = carIndexFromId && cars ? cars[index] : undefined
+  const selectedCar = cars ? cars[index] : undefined
 
   const inc = () => setSelectedIndex(() => Math.min(index + 1, Math.max(INDEX_CEIL, 0)))
   const dec = () => setSelectedIndex(() => Math.max(index - 1, 0))
