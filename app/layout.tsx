@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter, Oxanium, Outfit, DM_Sans, Noto_Serif } from "
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { TooltipProvider } from "./components/ui/tooltip"
+import { MswProvider } from "./mocks/msw-provider"
 import "./globals.css"
 import { cn } from "./util"
 
@@ -68,7 +69,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <Navigation />
-        <TooltipProvider>{children}</TooltipProvider>
+        <MswProvider>
+          <TooltipProvider>{children}</TooltipProvider>
+        </MswProvider>
       </body>
     </html>
   )
