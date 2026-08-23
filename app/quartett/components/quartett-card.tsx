@@ -5,7 +5,7 @@ export function CardTitle({ car: { brand, model, year } }: { car: CarDto }) {
   return (
     <div className="flex justify-between items-baseline">
       <span className="text-2xl truncate min-w-0 pr-1">
-        {brand} <span className="text-lg italic text-amber-800">{model}</span>
+        {brand} <span className="text-lg italic text-primary">{model}</span>
       </span>
       <span className="text-gray-500 text-sm shrink-0 pl-1">{year}</span>
     </div>

@@ -27,28 +27,28 @@ export function QuartettGallery() {
     getCars(currentPage * pageSize, pageSize).then(setCars)
   }, [carList, num_cars, currentPage, pageSize])
 
-  console.info({ cars, num_cars })
-
   if (num_cars === undefined) return "Loading"
+
+  const placeholder = Array.from({ length: pageSize }).map((_, idx) => (
+    <div
+      key={idx}
+      data-testid={"placeholder-" + idx}
+      className="w-full h-[288px] rounded-2xl bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-[length:200%_100%] animate-[shimmer_1.5s_infinite]"
+    />
+  ))
 
   return (
     <>
       <div className="w-full flex justify-between mb-3">{paginationElement}</div>
       <div className={cn("grid gap-3 grid-cols-3")}>
-        {!cars &&
-          Array.from({ length: pageSize }).map((_, idx) => (
-            <div
-              key={idx}
-              className="w-full h-[288px] rounded-2xl bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-[length:200%_100%] animate-[shimmer_1.5s_infinite]"
-            />
-          ))}
+        {!cars && placeholder}
         {cars &&
           cars.map((card) => (
             <Link key={card.id} href={`/quartett/browse?id=${card.id}`}>
               <TooltipProvider delayDuration={400}>
                 <Tooltip>
                   <TooltipTrigger className="cursor-pointer">
-                    <img src={`${basePath}/cars/${card.image}`} className="w-fit rounded-2xl" />
+                    <img src={`${basePath}/cars/${card.image}`} className="w-fit rounded-2xl" data-testid="image-car" />
                   </TooltipTrigger>
                   <TooltipContent className="flex flex-col bg-white text-black w-fit max-w-none">
                     <CardTitle car={card} />
