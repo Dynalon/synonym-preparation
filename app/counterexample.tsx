@@ -9,20 +9,26 @@ interface CounterStore {
   decrement: () => void
 }
 
-const useStore = create<CounterStore>((set) => ({
+export const useCounterStore = create<CounterStore>((set) => ({
   count: 0,
   increment: () => set((state) => ({ count: state.count + 1 })),
   decrement: () => set((state) => ({ count: state.count - 1 })),
 }))
 
 export const CounterExampleZustand = () => {
-  const { count, increment, decrement } = useStore()
+  const { count, increment, decrement } = useCounterStore()
   return (
     <div className="">
-      <label>Zustand Sample: counter={count}</label>
+      <label>
+        Zustand Sample: <span data-testid="counter-value">counter={count}</span>
+      </label>
       <div className="flex items-left gap-2">
-        <Button onClick={increment}>+</Button>
-        <Button onClick={decrement}>-</Button>
+        <Button onClick={increment} data-testid="counter-example-increment">
+          +
+        </Button>
+        <Button onClick={decrement} data-testid="counter-example-decrement">
+          -
+        </Button>
       </div>
     </div>
   )
