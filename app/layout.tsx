@@ -1,15 +1,15 @@
 "use client"
-import { Geist, Geist_Mono, Inter, Oxanium, Outfit, DM_Sans, Noto_Serif } from "next/font/google"
+import { DM_Sans, Geist, Geist_Mono, Noto_Serif } from "next/font/google"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { TooltipProvider } from "./components/ui/tooltip"
-import { MswProvider } from "./mocks/msw-provider"
 import "./globals.css"
+import { MswProvider } from "./mocks/msw-provider"
 import { cn } from "./util"
 
-const notoSerifHeading = Noto_Serif({subsets:['latin'],variable:'--font-heading'})
+const notoSerifHeading = Noto_Serif({ subsets: ["latin"], variable: "--font-heading" })
 
-const dmSans = DM_Sans({subsets:['latin'],variable:'--font-sans'})
+const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-sans" })
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

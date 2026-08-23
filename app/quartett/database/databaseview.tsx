@@ -1,17 +1,18 @@
 "use client"
 import { useLiveQuery } from "dexie-react-hooks"
-import carDatabase from "../database/cars.json"
 import { db } from "./db"
 import React from "react"
 import { Button } from "@/components/ui/button"
+import { getCars } from "../restApi"
 
 export function DatabaseView() {
-  const cars = useLiveQuery(async () => db.cars.toArray())
+  const cars = useLiveQuery(async () => await getCars())
 
   const importData = async () => {
-    for (const card of carDatabase.cards) {
-      const alreadyImported = (await db.cars.where("id").equals(card.id).count()) > 0
-      if (!alreadyImported) db.cars.add(card)
+    const cars = await getCars()
+    for (const car of cars) {
+      const alreadyImported = (await db.cars.where("id").equals(car.id).count()) > 0
+      if (!alreadyImported) db.cars.add(car)
     }
   }
 

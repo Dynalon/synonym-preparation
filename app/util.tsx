@@ -7,3 +7,4 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
+export const apiBasePath = `${basePath}/api`

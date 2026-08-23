@@ -35,7 +35,7 @@ function CarStatKeyValue({ label, value }: { label: React.ReactNode; value: Reac
 export function CarStatsGrid({ className, stats, ...props }: React.ComponentProps<"div"> & { stats: CarStats }) {
   return (
     <div className={cn("grid grid-cols-2 gap-x-1 gap-y-1", className)} {...props}>
-      <CarStatKeyValue label={"Accel. 0-100"} value={<>{stats.acceleration_0_100_s}s</>} />
+      <CarStatKeyValue label={"Acc. 0-100"} value={<>{stats.acceleration_0_100_s}s</>} />
       <CarStatKeyValue label={"Cylinders"} value={stats.cylinders} />
       <CarStatKeyValue label={"Displacement"} value={<>{stats.displacement_cc.toLocaleString()} cc</>} />
       <CarStatKeyValue label={"max RPM"} value={stats.max_rpm.toLocaleString()} />

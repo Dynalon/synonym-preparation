@@ -1,6 +1,6 @@
-import { http, HttpResponse } from "msw"
 import type { Car } from "@/quartett/types"
+import { apiBasePath } from "@/util"
+import { http, HttpResponse } from "msw"
+import cardsDatabase from "./cars.json"
 
-export const API_BASE = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/api`
-
-export const handlers = [http.get(`${API_BASE}/cars`, () => HttpResponse.json<Car[]>([]))]
+export const handlers = [http.get(`${apiBasePath}/cards`, () => HttpResponse.json<Car[]>(cardsDatabase.cards))]
