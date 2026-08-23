@@ -9,7 +9,7 @@ interface Store {
   nextPage: () => void
 }
 
-export const useGalleryStore = create<Store>((set) => ({
+export const usePaginationStore = create<Store>((set) => ({
   currentPage: 0,
   pageSize: 6,
   maxPagesVisible: 5,
