@@ -1,7 +1,6 @@
 import { CarDao } from "@/quartett/types"
 import { Dexie, EntityTable } from "dexie"
-import { getAllCars } from "../restApi"
-
+import carsDatabase from "../../mocks/cars.json"
 export const db = new Dexie("Quartett") as Dexie & {
   cars: EntityTable<CarDao, "idInt">
 }
@@ -11,7 +10,7 @@ db.version(2).stores({
 })
 
 export async function populateDb() {
-  await db.cars.bulkAdd(await getAllCars())
+  await db.cars.bulkAdd(carsDatabase.cards)
 }
 
 // intialize on create from our REST API

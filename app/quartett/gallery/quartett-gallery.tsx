@@ -2,51 +2,62 @@
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { basePath, cn } from "@/util"
-import { useLiveQuery } from "dexie-react-hooks"
 import Link from "next/link"
+import { useEffect, useState } from "react"
 import { CardTitle, CarStatsGrid } from "../components/quartett-card"
-import { db } from "../database/db"
+import { getCarList, getCars } from "../restApi"
+import { CarDto } from "../types"
 import { useGalleryPagination } from "./pagination"
 
 export function QuartettGallery() {
-  const num_cars = useLiveQuery(async () => db.cars.count())
-  const { paginationElement, currentPage, pageSize } = useGalleryPagination(
-    num_cars ? num_cars : 0,
-    num_cars !== undefined
-  )
+  const [carList, setCarList] = useState<string[] | undefined>(undefined)
+  const [cars, setCars] = useState<CarDto[] | undefined>(undefined)
 
-  const cars = useLiveQuery(
-    async () =>
-      num_cars
-        ? db.cars
-            .offset(pageSize * currentPage)
-            .limit(pageSize)
-            .toArray()
-        : undefined,
-    [currentPage, num_cars, pageSize]
-  )
+  const num_cars = carList?.length ?? 0
 
-  if (num_cars === undefined || !cars) return "Loading"
+  useEffect(() => {
+    getCarList().then(setCarList)
+  }, [])
+
+  const { paginationElement, currentPage, pageSize } = useGalleryPagination(num_cars, num_cars !== undefined)
+
+  useEffect(() => {
+    // eslint-disable-next-line
+    setCars(undefined)
+    getCars(currentPage * pageSize, pageSize).then(setCars)
+  }, [carList, num_cars, currentPage, pageSize])
+
+  console.info({ cars, num_cars })
+
+  if (num_cars === undefined) return "Loading"
 
   return (
     <>
       <div className="w-full flex justify-between mb-3">{paginationElement}</div>
       <div className={cn("grid gap-3 grid-cols-3")}>
-        {cars.map((card) => (
-          <Link key={card.id} href={`/quartett/browse?id=${card.id}`}>
-            <TooltipProvider delayDuration={400}>
-              <Tooltip>
-                <TooltipTrigger className="cursor-pointer">
-                  <img src={`${basePath}/cars/${card.image}`} className="w-fit rounded-2xl" />
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col bg-white text-black w-fit max-w-none">
-                  <CardTitle car={card} />
-                  <CarStatsGrid stats={card.stats} />
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-          </Link>
-        ))}
+        {!cars &&
+          Array.from({ length: pageSize }).map((_, idx) => (
+            <div
+              key={idx}
+              className="w-full h-[288px] rounded-2xl bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-[length:200%_100%] animate-[shimmer_1.5s_infinite]"
+            />
+          ))}
+        {cars &&
+          cars.map((card) => (
+            <Link key={card.id} href={`/quartett/browse?id=${card.id}`}>
+              <TooltipProvider delayDuration={400}>
+                <Tooltip>
+                  <TooltipTrigger className="cursor-pointer">
+                    <img src={`${basePath}/cars/${card.image}`} className="w-fit rounded-2xl" />
+                  </TooltipTrigger>
+                  <TooltipContent className="flex flex-col bg-white text-black w-fit max-w-none">
+                    <CardTitle car={card} />
+                    <CarStatsGrid stats={card.stats} />
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </Link>
+          ))}
       </div>
     </>
   )
