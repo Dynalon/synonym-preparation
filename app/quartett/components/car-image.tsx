@@ -17,7 +17,7 @@ export function CarImage({ carId, relativeUrl }: CarImageProps) {
       <Button
         variant={isInDeck ? "default" : "secondary"}
         size="icon"
-        className="cursor-pointer absolute top-[5px] right-[5px]"
+        className="cursor-pointer absolute bottom-[8px] right-[8px]"
         onClick={(ev) => {
           ev.preventDefault()
           toggle(carId)

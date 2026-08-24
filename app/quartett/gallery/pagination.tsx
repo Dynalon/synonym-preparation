@@ -11,18 +11,29 @@ import { usePaginationStore } from "./store"
 
 // page starts at 0
 function getVisiblePages(page: number, num_pages: number, max_visible: number): number[] {
-  const half = Math.floor(max_visible / 2)
-  const start = Math.min(Math.max(page - half, 0), Math.max(num_pages - max_visible, 0))
-  return Array.from({ length: Math.min(max_visible, num_pages) }, (_, i) => start + i)
+  if (num_pages <= 2) return []
+
+  const firstMiddle = 1
+  const lastMiddle = num_pages - 2
+  const middleCount = lastMiddle - firstMiddle + 1
+  if (middleCount <= 0) return []
+
+  const visibleCount = Math.min(max_visible, middleCount)
+  const half = Math.floor(visibleCount / 2)
+
+  const start = Math.min(Math.max(page - half, firstMiddle), Math.max(lastMiddle - visibleCount + 1, firstMiddle))
+
+  return Array.from({ length: visibleCount }, (_, i) => start + i)
 }
 
 export const useGalleryPagination = (num_items: number, enabled: boolean = true) => {
   const { currentPage, maxPagesVisible, pageSize, setCurrentPage, nextPage, prevPage } = usePaginationStore()
   const num_pages = Math.ceil(num_items / pageSize)
 
-  const visiblePages = getVisiblePages(currentPage, num_pages, maxPagesVisible)
-  const showLeftEllipsis = visiblePages[0] > 0
-  const showRightEllipsis = visiblePages[visiblePages.length - 1] < num_pages - 1
+  const middlePages = getVisiblePages(currentPage, num_pages, maxPagesVisible)
+  const showLeftEllipsis = middlePages.length > 0 && middlePages[0] > 1
+  const showRightEllipsis = middlePages.length > 0 && middlePages[middlePages.length - 1] < num_pages - 2
+  const hasLastPage = num_pages > 1
 
   const paginationElement = !enabled ? null : (
     <Pagination>
@@ -36,21 +47,37 @@ export const useGalleryPagination = (num_items: number, enabled: boolean = true)
         </PaginationItem>
 
         <div className="flex items-center gap-1">
+          <PaginationItem>
+            <PaginationLink isActive={currentPage === 0} onClick={() => setCurrentPage(0)}>
+              1
+            </PaginationLink>
+          </PaginationItem>
+
           {showLeftEllipsis && (
             <PaginationItem>
               <PaginationEllipsis />
             </PaginationItem>
           )}
-          {visiblePages.map((p) => (
+
+          {middlePages.map((p) => (
             <PaginationItem key={p}>
               <PaginationLink isActive={p === currentPage} onClick={() => setCurrentPage(p)}>
                 {p + 1}
               </PaginationLink>
             </PaginationItem>
           ))}
+
           {showRightEllipsis && (
             <PaginationItem>
               <PaginationEllipsis />
+            </PaginationItem>
+          )}
+
+          {hasLastPage && (
+            <PaginationItem>
+              <PaginationLink isActive={currentPage === num_pages - 1} onClick={() => setCurrentPage(num_pages - 1)}>
+                {num_pages}
+              </PaginationLink>
             </PaginationItem>
           )}
         </div>
