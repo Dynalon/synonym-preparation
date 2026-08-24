@@ -38,7 +38,7 @@ export function QuartettBrowser({ id }: { id?: string }) {
             {">"}
           </Button>
         </div>
-        <QuartettCard carId={currentId} />
+        {currentId && <QuartettCard carId={currentId} />}
       </div>
       <div className="mx-auto w-12"></div>
     </div>
