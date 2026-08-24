@@ -8,6 +8,7 @@ import { CardTitle, CarStatsGrid } from "../components/quartett-card"
 import { getCarList, getCars } from "../restApi"
 import { CarDto } from "../types"
 import { useGalleryPagination } from "./pagination"
+import { CarImage } from "../components/car-image"
 
 export function QuartettGallery() {
   const [carList, setCarList] = useState<string[] | undefined>(undefined)
@@ -48,7 +49,7 @@ export function QuartettGallery() {
               <TooltipProvider delayDuration={400}>
                 <Tooltip>
                   <TooltipTrigger className="cursor-pointer">
-                    <img src={`${basePath}/cars/${card.image}`} className="w-fit rounded-2xl" data-testid="image-car" />
+                    <CarImage relativeUrl={card.image} carId={card.id} />
                   </TooltipTrigger>
                   <TooltipContent className="flex flex-col bg-white text-black w-fit max-w-none">
                     <CardTitle car={card} />

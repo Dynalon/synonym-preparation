@@ -1,5 +1,8 @@
+import { cn } from "@/util"
+import { useEffect, useState } from "react"
+import { getCar } from "../restApi"
 import { CarDto, CarStats } from "../types"
-import { basePath, cn } from "@/util"
+import { CarImage } from "./car-image"
 
 export function CardTitle({ car: { brand, model, year } }: { car: CarDto }) {
   return (
@@ -11,20 +14,35 @@ export function CardTitle({ car: { brand, model, year } }: { car: CarDto }) {
     </div>
   )
 }
-export function QuartettCard({ car, loading }: { car?: CarDto; loading: boolean }) {
+
+export function QuartettCard({ carId }: { carId: string }) {
+  const [car, setCar] = useState<CarDto | undefined>()
+
+  useEffect(() => {
+    // eslint-disable-next-line
+    setCar(undefined)
+    getCar(carId).then(setCar)
+  }, [carId])
+
   return (
     <div className="relative w-[400px] p-3 rounded-2xl bg-white shadow-2xl flex flex-col gap-2 min-h-[500px]">
-      {loading || !car ? (
+      {!car ? (
         <div className="w-full flex-1 rounded-2xl bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-[length:200%_100%] animate-[shimmer_1.5s_infinite]" />
       ) : (
-        <>
-          <CardTitle car={car} />
-          <img src={`${basePath}/cars/${car.image}`} className="w-full rounded-2xl" />
-          <hr className="border-gray-200 my-3 w-[80%] mx-auto" />
-          <CarStatsGrid stats={car.stats} />
-        </>
+        <Card car={car} />
       )}
     </div>
+  )
+}
+
+function Card({ car }: { car: CarDto }) {
+  return (
+    <>
+      <CardTitle car={car} />
+      <CarImage carId={car.id} relativeUrl={car.image} />
+      <hr className="border-gray-200 my-3 w-[80%] mx-auto" />
+      <CarStatsGrid stats={car.stats} />
+    </>
   )
 }
 

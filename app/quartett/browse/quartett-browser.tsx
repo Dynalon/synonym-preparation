@@ -2,12 +2,10 @@
 import { Button } from "@/components/ui/button"
 import { useEffect, useState } from "react"
 import { QuartettCard } from "../components/quartett-card"
-import { getCar, getCarList } from "../restApi"
-import { CarDto } from "../types"
+import { getCarList } from "../restApi"
 
 export function QuartettBrowser({ id }: { id?: string }) {
   const [carList, setCarList] = useState<string[] | undefined>(undefined)
-  const [car, setCar] = useState<CarDto | undefined>()
   const [selectedIndex, setSelectedIndex] = useState<number | undefined>()
 
   useEffect(() => {
@@ -21,15 +19,8 @@ export function QuartettBrowser({ id }: { id?: string }) {
   const index = selectedIndex ?? carIndexFromId ?? 0
   const currentId = carList?.[index]
 
-  useEffect(() => {
-    if (carList && currentId) {
-      getCar(currentId).then(setCar)
-    }
-  }, [index, carList, currentId])
-
   const inc = () => setSelectedIndex(() => Math.min(index + 1, Math.max(INDEX_CEIL, 0)))
   const dec = () => setSelectedIndex(() => Math.max(index - 1, 0))
-  const loading = car?.id !== currentId
 
   if (!carList) return "Loading..."
 
@@ -47,7 +38,7 @@ export function QuartettBrowser({ id }: { id?: string }) {
             {">"}
           </Button>
         </div>
-        <QuartettCard car={car} loading={loading} />
+        <QuartettCard carId={currentId} />
       </div>
       <div className="mx-auto w-12"></div>
     </div>

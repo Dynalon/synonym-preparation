@@ -6,6 +6,7 @@ import { TooltipProvider } from "./components/ui/tooltip"
 import "./globals.css"
 import { MswProvider } from "./mocks/msw-provider"
 import { cn } from "./util"
+import { useDeckStore } from "./quartett/deck/store"
 
 const notoSerifHeading = Noto_Serif({ subsets: ["latin"], variable: "--font-heading" })
 
@@ -34,6 +35,8 @@ function NavLink({ label, href }: { label: React.ReactNode; href: string }) {
 }
 
 function Navigation() {
+  const { carIds } = useDeckStore()
+  const numCardsInDeck = carIds.length.toString()
   return (
     <div className="w-full flex justify-center items-center p-2 gap-x-4 fixed top bg-white">
       <NavLink label={"Card Browser"} href="/quartett/browse" />
@@ -41,6 +44,8 @@ function Navigation() {
       <NavLink label={"Gallery"} href="/quartett/gallery" />
       {" | "}
       <NavLink label={"Database"} href="/quartett/database" />
+      {" | "}
+      <NavLink label={"Card Deck (" + numCardsInDeck + ")"} href="/quartett/deck" />
       {" | "}
       <NavLink label={"Playground"} href="/" />
     </div>
