@@ -1,14 +1,18 @@
 import { create } from "zustand"
 
-interface Deck {
+interface DeckStoreState {
   carIds: string[]
+}
 
+interface DeckStoreActions {
   addCar: (id: string) => void
   removeCar: (id: string) => void
   toggle: (id: string) => void
 }
 
-export const useDeckStore = create<Deck>((set, get) => ({
+type DeckStore = DeckStoreState & DeckStoreActions
+
+export const useDeckStore = create<DeckStore>((set, get) => ({
   carIds: [],
 
   addCar: (id: string) =>
