@@ -30,10 +30,10 @@ describe("gallery", () => {
     vi.mocked(restApi.getCars).mockImplementation(async (offset = 0, limit = 6) =>
       cardsDatabase.cards.slice(offset, offset + limit)
     )
-    render(<QuartettGallery />)
   })
 
   it("should show a placeholder while loading", () => {
+    render(<QuartettGallery />)
     expect(galleryPO.placeholder(0)).toBeInTheDocument()
     expect(galleryPO.placeholder(1)).toBeInTheDocument()
     expect(galleryPO.placeholder(2)).toBeInTheDocument()
@@ -43,15 +43,23 @@ describe("gallery", () => {
   })
 
   it("should load and no longer show the placeholder", async () => {
+    render(<QuartettGallery />)
     await waitFor(() => {
       expect(galleryPO.queryPlaceholder(0)).not.toBeInTheDocument()
     })
   })
 
   it("should load images eventually", async () => {
+    render(<QuartettGallery />)
     await waitFor(() => {
       expect(galleryPO.queryPlaceholder(0)).not.toBeInTheDocument()
     })
     expect(galleryPO.images).toHaveLength(6)
+  })
+
+  it("should match the snapshot", () => {
+    render(<QuartettGallery />)
+    const result = render(<QuartettGallery />)
+    expect(result).toMatchSnapshot()
   })
 })
